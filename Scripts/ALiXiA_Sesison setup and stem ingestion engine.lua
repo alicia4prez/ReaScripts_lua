@@ -1,5 +1,5 @@
 -- @description Composition Session Setup & Automated Stem Ingestion Engine v2.8
--- @author REA the Reaper Queen
+-- @author ALiXiA Gregory
 -- @version 2.8
 -- ENHANCEMENTS: Master metering, FX returns, gain staging integration, improved routing
 
