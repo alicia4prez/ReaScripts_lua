@@ -1,6 +1,7 @@
--- @description Advanced Modal & Scale Quality Transposer (Major/Minor/Modes) v4.1
+-- @description ALiXiA_Diatonic major minor mode transposer
 -- @version 4.1
--- Enhanced with: multi-track support, presets, detailed feedback, better error handling
+-- @author ALiXiA Gregory
+-- Enhanced with: multi-track support
 
 local function msg(text)
   reaper.ShowConsoleMsg(text .. "\n")
@@ -237,5 +238,3 @@ end
 -- ============================================================================
 
 main()
-</parameter>
-</invoke>
