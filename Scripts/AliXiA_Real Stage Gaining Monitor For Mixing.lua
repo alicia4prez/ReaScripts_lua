@@ -1,4 +1,6 @@
---[[
+--@description Gain Staging Utility
+--@author ALiXiA Gregory
+--@version 2.0
 ===========================================================
         REAPER GAIN STAGING ANALYZER
 ===========================================================
