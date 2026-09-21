@@ -1,5 +1,5 @@
 -- @description REA Studio Manager (Project, Track, & Time Tracker) v2.7 FIXED
--- @author REA the Reaper Queen
+-- @author ALiXiA Gregory
 -- @version 2.7
 -- Requires: ReaImGui extension
 
