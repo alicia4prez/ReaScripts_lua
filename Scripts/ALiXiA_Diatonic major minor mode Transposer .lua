@@ -1,5 +1,5 @@
 -- @description ALiXiA_Diatonic major minor mode transposer
--- @version 4.1
+-- @version 1.5
 -- @author ALiXiA Gregory
 -- Enhanced with: multi-track support
 
