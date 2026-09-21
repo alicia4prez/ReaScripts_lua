@@ -1,23 +1,28 @@
-# ReaPack Repository Template
+# Alicia's Reaper Scripts
 
-A template for GitHub-hosted ReaPack repositories with automated
-[reapack-index](https://github.com/cfillion/reapack-index)
-running from GitHub Actions.
+These are scripts I have personally done to better my workflow or have convinced others to aid me in writting them. The were born out of necessity from tryiong to simply my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time.
 
-Replace the name of the repository in [index.xml](/index.xml) when using this template.
-This will be the name shown in ReaPack.
+## Installing from my github repository 
 
-```xml
-<index version="1" name="Name of your repository here">
-```
+Copy the following url and paste inside Extensions > ReaPack > Import a Repository:
 
-Replace the contents of this file ([README.md](/README.md)).
-This will be the text shown when using ReaPack's "About this repository" feature.
+https://github.com/alicia4prez/ReaScripts_lua
 
-reapack-index looks for package files in subfolders.
-The folder tree represents the package categories shown in ReaPack.
+### Included Scripts
 
-Each package file is expected to begin with a metadata header.
-See [Packaging Documentation](https://github.com/cfillion/reapack-index/wiki/Packaging-Documentation) on reapack-index's wiki.
+-   Scripts\ALiXiA_Diatonic major minor mode transposer
+-   Scripts\ALiXiA_Session setup and ingestion
+-   Scripts\ALiXiA_Digital Fingerprint
+-   Scripts\DSP_worker.py
+-   Scripts\ALiXiA_Studio Manager Script
+-   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
+-   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 
-The URL to import in ReaPack is [https://github.com/`<your username>`/`<repository name>`/raw/master/index.xml](https://github.com/cfillion/reapack-repository-template/raw/master/index.xml).
+
+#### ## Manual Download Instructions (Optional)
+If you would prefer to download the scripts here manually, you can click on "Clone or Download", Download as ZIP, and then place the scripts anywhere you would like on your PC. I would recommend placing them within <AppData\Roaming\REAPER\Scripts\>, as they will get included whenever you export or backup your Reaper configuration.
+
+## Special Thanks To
+
+-   Rhea Gem
+-   Higgins Clark
