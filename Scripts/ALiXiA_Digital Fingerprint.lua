@@ -1,3 +1,7 @@
+--@description ALiXiA_Digital Fingerprint
+--@author ALiXiA Gregory
+--@version 1.0
+
 -- ============================================================================
 -- REAPER Digital Fingerprint Embedder (Lua)
 -- ============================================================================
