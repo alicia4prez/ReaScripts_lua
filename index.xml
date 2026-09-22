@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="58a3e39ba95bd0f35846aa1f39aa4cb2574295e1">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="f3b49eb40de4045f9d9afc48c86a9355714f7b1b">
   <category name="Example">
     <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
@@ -21,34 +21,63 @@ Markdown
       </version>
     </reapack>
   </category>
+  <category name="Scripts">
+    <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
+      <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T22:54:19Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/31dc5f1c7ecaf1565ebc7474c39358dd4ccf070a/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
+      </version>
+      <version name="1.5" author="ALiXiA Gregory" time="2026-09-21T23:19:37Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1b9c3657e96f69e36e49e88ef9243434909b68b1/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Digital Fingerprint.lua" type="script" desc="ALiXiA_Digital Fingerprint">
+      <version name="1.0" author="ALiXiA Gregory" time="2026-09-21T23:20:57Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/71a6fde2f0680c6eba1737a75a47b390a13a40f1/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
+      <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
+      <version name="2.0" author="ALiXiA Gregory" time="2026-09-21T23:23:38Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Sesison setup and stem ingestion engine.lua" type="script" desc="Composition Session Setup &amp; Automated Stem Ingestion Engine v2.8">
+      <version name="2.8" author="REA the Reaper Queen" time="2026-09-21T22:58:14Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c1879437ab6e20e0522fbd0a94cf71ae6dbdd758/Scripts/ALiXiA_Sesison%20setup%20and%20stem%20ingestion%20engine.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
+      <version name="2.7" author="REA the Reaper Queen" time="2026-09-21T23:06:49Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+      </version>
+    </reapack>
+  </category>
   <metadata>
-    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 ReaPack Repository Template\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 A template for GitHub-hosted ReaPack repositories with automated {\field{\*\fldinst{HYPERLINK "https://github.com/cfillion/reapack-index"}}{\fldrslt{\ul
-reapack-index
-}}}
- running from GitHub Actions.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Replace the name of the repository in {\field{\*\fldinst{HYPERLINK "/index.xml"}}{\fldrslt{\ul
-index.xml
-}}}
- when using this template. This will be the name shown in ReaPack.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \f1 <index version="1" name="Name of your repository here">\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Replace the contents of this file ({\field{\*\fldinst{HYPERLINK "/README.md"}}{\fldrslt{\ul
-README.md
-}}}
-). This will be the text shown when using ReaPack's "About this repository" feature.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 reapack-index looks for package files in subfolders. The folder tree represents the package categories shown in ReaPack.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Each package file is expected to begin with a metadata header. See {\field{\*\fldinst{HYPERLINK "https://github.com/cfillion/reapack-index/wiki/Packaging-Documentation"}}{\fldrslt{\ul
-Packaging Documentation
-}}}
- on reapack-index's wiki.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 The URL to import in ReaPack is {\field{\*\fldinst{HYPERLINK "https://github.com/cfillion/reapack-repository-template/raw/master/index.xml"}}{\fldrslt{\ul
-https://github.com/{\f1 <your username>}/{\f1 <repository name>}/raw/master/index.xml
-}}}
-.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Alicia's Reaper Scripts\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 These are scripts I have personally done to better my workflow or have convinced others to aid me in writting them. The were born out of necessity from tryiong to simply my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Installing from my github repository\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 https://github.com/alicia4prez/ReaScripts_lua/index.xml\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Included Scripts\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Diatonic major minor mode transposer\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Session setup and ingestion\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Digital Fingerprint\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Real Stage Gaining Monitor For Mixing\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mix Prep and Session Sanitizer\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 ## Manual Download Instructions (Optional)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 If you would prefer to download the scripts here manually, you can click on "Clone or Download", Download as ZIP, and then place the scripts anywhere you would like on your PC. I would recommend placing them within <AppData\\Roaming\\REAPER\\Scripts>, as they will get included whenever you export or backup your Reaper configuration.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Special Thanks To\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Rhea Gem\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Higgins Clark\sa180\par}
 }
 ]]></description>
   </metadata>
