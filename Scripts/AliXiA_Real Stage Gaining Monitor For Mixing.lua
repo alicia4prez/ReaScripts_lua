@@ -36,7 +36,6 @@ No audio is altered.
 No plugins are inserted.
 No track settings are changed.
 ===========================================================
-]]
 
 -----------------------------------------------------------
 -- SETTINGS
