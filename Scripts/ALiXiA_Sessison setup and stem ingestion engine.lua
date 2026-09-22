@@ -1,8 +1,7 @@
 -- @description ALiXiA_Sessison setup and stem ingestion engine
 -- @author ALiXiA
 -- @version 1.0.0
--- @about
--- ENHANCEMENTS: Master metering, FX returns, gain staging integration, improved routing
+-- @about Master metering, FX returns, gain staging integration, improved routing
 
 function get_color(r, g, b)
     return reaper.ColorToNative(r, g, b) | 0x1000000
