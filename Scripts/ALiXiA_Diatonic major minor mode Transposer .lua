@@ -1,8 +1,11 @@
 -- @description ALiXiA_Diatonic major minor mode transposer
--- @version 1.5
--- @author ALiXiA Gregory
--- Enhanced with: multi-track support
-
+-- @author ALiXiA
+-- @version 1.0
+-- @about
+--   Transposes a file from Root source and mode (GMin example)
+--   another Root Sourse and mode (C#Min)
+-- @changelog
+--   - Initial release
 local function msg(text)
   reaper.ShowConsoleMsg(text .. "\n")
 end
