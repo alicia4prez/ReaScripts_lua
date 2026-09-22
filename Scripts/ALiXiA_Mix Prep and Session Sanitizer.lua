@@ -1,7 +1,8 @@
 -- @description ALiXiA_Mix Prep and Session Sanitizer
 -- @author ALiXia
 -- @version 1.0.0
--- @about Mixing prep and session sanitizer
+-- @about 
+--   -- Mixing prep and session sanitizer
 -- @changelog Initial release
 --   
 -- ==============================================================================
