@@ -4,6 +4,7 @@
 --@about 
 --   Real-time selected-track gain staging monitor.
 --   Peak dbFS, average level, crest factor, difference.  
+-- [[
 ===========================================================
         REAPER GAIN STAGING ANALYZER
 ===========================================================
@@ -36,6 +37,7 @@ No audio is altered.
 No plugins are inserted.
 No track settings are changed.
 ===========================================================
+--]]
 
 -----------------------------------------------------------
 -- SETTINGS
