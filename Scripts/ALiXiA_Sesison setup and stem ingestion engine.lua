@@ -1,6 +1,7 @@
--- @description Composition Session Setup & Automated Stem Ingestion Engine v2.8
--- @author ALiXiA Gregory
--- @version 2.8
+-- @description ALiXiA_Sesison setup and stem ingestion engine
+-- @author ALiXiA
+-- @version 1.0.0
+-- @about
 -- ENHANCEMENTS: Master metering, FX returns, gain staging integration, improved routing
 
 function get_color(r, g, b)
