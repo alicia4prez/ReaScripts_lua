@@ -13,7 +13,6 @@ https://github.com/alicia4prez/ReaScripts_lua/index.xml
 -   Scripts\ALiXiA_Diatonic major minor mode transposer
 -   Scripts\ALiXiA_Session setup and ingestion
 -   Scripts\ALiXiA_Digital Fingerprint
--   Scripts\DSP_worker.py
 -   Scripts\ALiXiA_Studio Manager Script
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
