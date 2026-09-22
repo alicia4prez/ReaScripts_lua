@@ -6,7 +6,7 @@ These are scripts I have personally done to better my workflow or have convinced
 
 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:
 
-https://github.com/alicia4prez/ReaScripts_lua
+https://github.com/alicia4prez/ReaScripts_lua/index.xml
 
 ### Included Scripts
 
