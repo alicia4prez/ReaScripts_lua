@@ -2,7 +2,8 @@
 -- @author ALiXia
 -- @version 1.0.0
 -- @about 
---   -- Mixing prep and session sanitizer
+--   Mixing prep and session sanitizer
+--   Session verificatiobn, cleans up tracks and folders
 -- @changelog Initial release
 --   
 -- ==============================================================================
