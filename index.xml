@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="9712c6f48358ed2f0717026e8e4425d64f191816">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="2c21f1a1a7e7871bde2dfbe0480185278700ff9e">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -60,7 +60,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Real-time selected-track gain staging monitor.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Real-time selected-track gain staging monitor. Peak dbFS, average level, crest factor, difference.\par}
 }
 ]]></description>
       </metadata>
