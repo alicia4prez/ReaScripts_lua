@@ -4,7 +4,8 @@
 -- @about 
 --   Mixing prep and session sanitizer
 --   Session verificatiobn, cleans up tracks and folders
--- @changelog Initial release
+-- @changelog 
+--    - Initial release
 --   
 -- ==============================================================================
 -- Mix Prep & Session Sanitizer v4.1
