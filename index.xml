@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="2c21f1a1a7e7871bde2dfbe0480185278700ff9e">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="dfb8daae09886fcbae48430f6228d46e609d2d8f">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -103,7 +103,7 @@
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Alicia's Reaper Scripts\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 These are scripts I have personally done to better my workflow or have convinced others to aid me in writting them. The were born out of necessity from tryiong to simply my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 These are scripts I have personally done to better my workflow or have convinced others to aid me in writing them. The were born out of necessity from trying to simplify my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time in the log run. The scripts cover transposing engine for audio files, hash generating for file integrity verification (requires dspworker.py) as a dependency. Mixing preparation script that cleans tracks, sanitizes and glues audio and prepares the session to switch from production to mixing.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Installing from my github repository\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 (https://github.com/alicia4prez/ReaScripts_lua/raw/master/index.xml)\par}
