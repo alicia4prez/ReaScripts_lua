@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="05471ced077a917062e76a1971d5468b3737b86b">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="7e78720c3ab90d9e835014640b0cdbc4df72a72a">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -42,7 +42,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Mixing prep and session sanitizer\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Mixing prep and session sanitizer\par}
 }
 ]]></description>
       </metadata>
