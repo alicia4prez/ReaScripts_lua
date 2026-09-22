@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="7e78720c3ab90d9e835014640b0cdbc4df72a72a">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="1e1f4f2961958ffac2973c281a6320182198759b">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -66,6 +66,20 @@
       </metadata>
       <version name="2.0" author="ALiXiA Gregory" time="2026-09-21T23:23:38Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Sessison setup and stem ingestion engine.lua" type="script" desc="ALiXiA_Sessison setup and stem ingestion engine">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Master metering, FX returns, gain staging integration, improved routing\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="ALiXiA" time="2026-09-22T19:11:46Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1e1f4f2961958ffac2973c281a6320182198759b/Scripts/ALiXiA_Sessison%20setup%20and%20stem%20ingestion%20engine.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
