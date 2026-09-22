@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="f3b49eb40de4045f9d9afc48c86a9355714f7b1b">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d9a094c8052b25470e78c1d757f4d3bb11dd6eac">
   <category name="Example">
     <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
       <metadata>
@@ -23,11 +23,24 @@ Markdown
   </category>
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Transposes a file from Root source and mode (GMin example) another Root Sourse and mode (C#Min)\par}
+}
+]]></description>
+      </metadata>
       <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T22:54:19Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/31dc5f1c7ecaf1565ebc7474c39358dd4ccf070a/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
       </version>
       <version name="1.5" author="ALiXiA Gregory" time="2026-09-21T23:19:37Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1b9c3657e96f69e36e49e88ef9243434909b68b1/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
+      </version>
+      <version name="1.0" author="ALiXiA" time="2026-09-22T09:26:07Z">
+        <changelog><![CDATA[- Initial release]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d9a094c8052b25470e78c1d757f4d3bb11dd6eac/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Digital Fingerprint.lua" type="script" desc="ALiXiA_Digital Fingerprint">
