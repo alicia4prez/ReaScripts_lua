@@ -1,6 +1,11 @@
---@description ALiXiA_Digital Fingerprint
---@author ALiXiA Gregory
---@version 1.0
+-- @description Digital Fingerprint
+-- @author ALiXiA
+-- @version 1.0
+-- @about
+--   Prepares a session for mixing by organizing tracks, 
+--   color-coding, and resetting faders.
+-- @changelog
+--   - Initial release
 
 -- ============================================================================
 -- REAPER Digital Fingerprint Embedder (Lua)
