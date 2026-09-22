@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d1a1353f6b08e6a3c09bdee8d1425e7e9ceacb16">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="92d4e04f0d79b51b5a6cfc3b522638c3243a244e">
   <category name="Example">
     <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
       <metadata>
@@ -58,16 +58,47 @@ Markdown
       </version>
     </reapack>
     <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Mixing prep and session sanitizer\sa180\par}
+}
+]]></description>
+      </metadata>
       <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
       </version>
+      <version name="1.0.0" author="ALiXia" time="2026-09-22T09:41:21Z">
+        <changelog><![CDATA[- Initial release]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/53ccaefaf1be8e1157f82e16638094811d533a40/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
     </reapack>
     <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Real-time selected-track gain staging monitor.\par}
+}
+]]></description>
+      </metadata>
       <version name="2.0" author="ALiXiA Gregory" time="2026-09-21T23:23:38Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Time tracker and session notes\par}
+}
+]]></description>
+      </metadata>
       <version name="2.7" author="REA the Reaper Queen" time="2026-09-21T23:06:49Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
       </version>
