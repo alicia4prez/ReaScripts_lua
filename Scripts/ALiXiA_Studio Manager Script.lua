@@ -1,7 +1,10 @@
 -- @description REA Studio Manager (Project, Track, & Time Tracker) v2.7 FIXED
 -- @author ALiXiA Gregory
 -- @version 2.7
--- Requires: ReaImGui extension
+-- @about
+--   Time tracker and session notes
+-- @changelog
+--   - Initial release
 
 local r = reaper
 
