@@ -2,7 +2,8 @@
 -- @author ALiXiA Gregory
 -- @version 2.7
 -- @about
---   Time tracker and session notes
+--   Time tracker and session note. Metadata
+--   and time calculator for billing
 -- @changelog
 --   - Initial release
 
