@@ -1,4 +1,4 @@
--- @description ALiXiA_Sesison setup and stem ingestion engine
+-- @description ALiXiA_Sessison setup and stem ingestion engine
 -- @author ALiXiA
 -- @version 1.0.0
 -- @about
