@@ -1,6 +1,9 @@
 -- @description ALiXiA_Mix Prep and Session Sanitizer
--- @version 4.1
--- @author ALiXiA Gregory
+-- @author ALiXia
+-- @version 1.0.0
+-- @about
+--   
+--   
 -- ==============================================================================
 -- Mix Prep & Session Sanitizer v4.1
 -- ==============================================================================
