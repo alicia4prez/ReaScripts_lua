@@ -4,40 +4,38 @@
 --@about 
 --   Real-time selected-track gain staging monitor.
 --   Peak dbFS, average level, crest factor, difference.  
--- [[
-===========================================================
-        REAPER GAIN STAGING ANALYZER
-===========================================================
-
-Real-time selected-track gain staging monitor.
-
-Displays:
-    • Peak dBFS
-    • Smoothed average level
-    • Left / Right peak
-    • Crest factor
-    • Distance from -18 dBFS target
-    • Visual dBFS meter
-    • Gain-staging status
-
-IMPORTANT:
-REAPER's standard ReaScript API exposes real-time peak
-meter information, but not a true post-FX RMS meter.
-
-Therefore:
-    PEAK       = actual REAPER track peak
-    AVERAGE    = smoothed energy representation
-
-The average is NOT falsely labeled RMS.
-
-TARGET:
-    -18 dBFS
-
-No audio is altered.
-No plugins are inserted.
-No track settings are changed.
-===========================================================
---]]
+-- ===========================================================
+--        REAPER GAIN STAGING ANALYZER
+-- ===========================================================
+--
+-- Real-time selected-track gain staging monitor.
+--
+--Displays:
+--    • Peak dBFS
+--   • Smoothed average level
+--    • Left / Right peak
+--    • Crest factor
+--    • Distance from -18 dBFS target
+--    • Visual dBFS meter
+--    • Gain-staging status
+--
+-- IMPORTANT:
+-- REAPER's standard ReaScript API exposes real-time peak
+-- meter information, but not a true post-FX RMS meter.
+--
+-- Therefore:
+--     PEAK       = actual REAPER track peak
+--     AVERAGE    = smoothed energy representation
+--
+-- The average is NOT falsely labeled RMS.
+-- 
+-- TARGET:
+--     -18 dBFS
+-- 
+-- No audio is altered.
+-- No plugins are inserted.
+-- No track settings are changed.
+-- ===========================================================
 
 -----------------------------------------------------------
 -- SETTINGS
