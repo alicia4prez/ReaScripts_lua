@@ -1,6 +1,6 @@
 # Alicia's Reaper Scripts
 
-These are scripts I have personally done to better my workflow or have convinced others to aid me in writting them. The were born out of necessity from tryiong to simply my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time.
+These are scripts I have personally done to better my workflow or have convinced others to aid me in writing them. The were born out of necessity from trying to simplify my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time in the log run. The scripts cover transposing engine for audio files, hash generating for file integrity verification (requires dspworker.py) as a dependency. Mixing preparation script that cleans tracks, sanitizes and glues audio and prepares the session to switch from production to mixing. 
 
 ## Installing from my github repository 
 
