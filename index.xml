@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="3e81e06be87d20db3ae45de0bc51ae43306d3bbf">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d1a1353f6b08e6a3c09bdee8d1425e7e9ceacb16">
   <category name="Example">
     <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
       <metadata>
@@ -65,11 +65,6 @@ Markdown
     <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
       <version name="2.0" author="ALiXiA Gregory" time="2026-09-21T23:23:38Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
-      </version>
-    </reapack>
-    <reapack name="ALiXiA_Sesison setup and stem ingestion engine.lua" type="script" desc="Composition Session Setup &amp; Automated Stem Ingestion Engine v2.8">
-      <version name="2.8" author="REA the Reaper Queen" time="2026-09-21T22:58:14Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c1879437ab6e20e0522fbd0a94cf71ae6dbdd758/Scripts/ALiXiA_Sesison%20setup%20and%20stem%20ingestion%20engine.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
