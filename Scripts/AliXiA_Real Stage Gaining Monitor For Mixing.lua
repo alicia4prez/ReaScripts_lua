@@ -1,8 +1,9 @@
 --@description Gain Staging Utility
 --@author ALiXiA Gregory
 --@version 2.0
---@about Real-time selected-track gain staging monitor.
---[[
+--@about 
+--   Real-time selected-track gain staging monitor.
+--   Peak dbFS, average level, crest factor, difference.  
 ===========================================================
         REAPER GAIN STAGING ANALYZER
 ===========================================================
