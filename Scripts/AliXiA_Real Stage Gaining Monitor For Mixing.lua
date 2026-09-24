@@ -1,41 +1,44 @@
---@description ALiXiA_Gain Staging Utility
+--@description Gain Staging Utility
 --@author ALiXiA Gregory
 --@version 2.0
---@about 
---   Real-time selected-track gain staging monitor.
---   Peak dbFS, average level, crest factor, difference.  
+--@about
+-- Reaper gain Staging Analyzer FIxed
+-- monitor audio in real time 
 --[[
 ===========================================================
-      REAPER GAIN STAGING ANALYZER
+        REAPER GAIN STAGING ANALYZER
 ===========================================================
 
- Real-time selected-track gain staging monitor.
+Real-time selected-track gain staging monitor.
 
 Displays:
     • Peak dBFS
-   • Smoothed average level
+    • Smoothed average level
     • Left / Right peak
     • Crest factor
     • Distance from -18 dBFS target
     • Visual dBFS meter
     • Gain-staging status
- IMPORTANT:
- REAPER's standard ReaScript API exposes real-time peak
- meter information, but not a true post-FX RMS meter.
 
- Therefore:
+IMPORTANT:
+REAPER's standard ReaScript API exposes real-time peak
+meter information, but not a true post-FX RMS meter.
+
+Therefore:
     PEAK       = actual REAPER track peak
-     AVERAGE    = smoothed energy representation
+    AVERAGE    = smoothed energy representation
 
 The average is NOT falsely labeled RMS.
 
- TARGET:
-     -18 dBFS 
+TARGET:
+    -18 dBFS
+
 No audio is altered.
 No plugins are inserted.
 No track settings are changed.
 ===========================================================
 ]]
+
 -----------------------------------------------------------
 -- SETTINGS
 -----------------------------------------------------------
@@ -94,7 +97,7 @@ local function amp_to_db(amp)
         return -150.0
     end
 
-    return 20.0 * math.log(amp, 10)
+    return 20.0 * (math.log(amp) / math.log(10))
 
 end
 
@@ -132,7 +135,7 @@ local function get_track_name(track)
     end
 
     local retval, name =
-        reaper.GetTrackName(track)
+        reaper.GetSetMediaTrackInfo_String(track, "P_NAME", "", false)
 
     if not retval or name == "" then
         return "Unnamed Track"
