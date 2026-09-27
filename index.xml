@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="6be5fcf7e1d57a167ea74395ea38de1aef5479f2">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="0bd61b29e4e9725fc681889640baed58c706252a">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -36,13 +36,13 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/71a6fde2f0680c6eba1737a75a47b390a13a40f1/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
+    <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="Digital Fingerprint">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Mixing prep and session sanitizer Session verificatiobn, cleans up tracks and folders\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Prepares a session for mixing by organizing tracks, color-coding, and resetting faders.\par}
 }
 ]]></description>
       </metadata>
