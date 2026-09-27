@@ -1,21 +1,22 @@
--- @description Digital Fingerprint
--- @author ALiXiA
+-- @description Mix Prep & Session Sanitizer
+-- @author Rea and ALiXiA - The Reaper Queens
 -- @version 4.1
 -- @about
---   Prepares a session for mixing by organizing tracks, 
---   color-coding, and resetting faders.
+--   Prepares a session for mixing by organizing tracks,
+--   gain staging items, cleaning routing, and resetting faders.
 -- @changelog
 --   - Initial release under 4.1 to the community
+
 -- ==============================================================================
 -- Mix Prep & Session Sanitizer v4.1
 -- ==============================================================================
 -- Enhanced with:
---   • Detailed logging & progress tracking
---   • Error handling & validation
---   • Folder track preservation
---   • Pre/post session verification
---   • Integration hooks for gain staging & transposition
---   • Customizable parameters
+--   - Detailed logging & progress tracking
+--   - Error handling & validation
+--   - Folder track preservation
+--   - Pre/post session verification
+--   - Integration hooks for gain staging & transposition
+--   - Customizable parameters
 -- ==============================================================================
 
 local function msg(text)
@@ -35,15 +36,15 @@ local function log_section(title)
 end
 
 local function log_success(text)
-  msg("  ✓ " .. text)
+  msg("  [OK] " .. text)
 end
 
 local function log_warning(text)
-  msg("  ⚠ " .. text)
+  msg("  [WARN] " .. text)
 end
 
 local function log_error(text)
-  msg("  ✗ " .. text)
+  msg("  [ERR] " .. text)
 end
 
 -- ============================================================================
@@ -96,12 +97,12 @@ local function audit_session()
     stats.total_envelopes = stats.total_envelopes + reaper.CountTrackEnvelopes(track)
   end
   
-  msg(string.format("  Tracks:           %d (folders: %d, muted: %d)", 
+  msg(string.format("  Tracks:            %d (folders: %d, muted: %d)", 
     stats.total_tracks, stats.folder_tracks, stats.muted_tracks))
-  msg(string.format("  Media Items:      %d", stats.total_items))
-  msg(string.format("  Track FX:         %d", stats.total_fx))
-  msg(string.format("  Sends/Receives:   %d / %d", stats.total_sends, stats.total_receives))
-  msg(string.format("  Automation Envs:  %d", stats.total_envelopes))
+  msg(string.format("  Media Items:       %d", stats.total_items))
+  msg(string.format("  Track FX:          %d", stats.total_fx))
+  msg(string.format("  Sends/Receives:    %d / %d", stats.total_sends, stats.total_receives))
+  msg(string.format("  Automation Envs:   %d", stats.total_envelopes))
   
   return stats
 end
@@ -152,12 +153,8 @@ local function cleanup_automation()
     for e = 0, env_count - 1 do
       local env = reaper.GetTrackEnvelope(track, e)
       if env then
-        -- Count points before deletion
         local point_count = reaper.CountEnvelopePoints(env)
-        
-        -- Delete all points
         reaper.DeleteEnvelopePointRange(env, -1000, 10000000)
-        
         total_removed = total_removed + point_count
       end
     end
@@ -266,40 +263,36 @@ local function process_items()
         track_name = "Track " .. tostring(math.floor(reaper.GetMediaTrackInfo_Value(track, "IP_TRACKNUMBER")))
       end
       
-      -- ====== STEP 1: Deselect all ======
+      -- Step 1: Deselect all
       reaper.Main_OnCommand(40289, 0)
       
-      -- ====== STEP 2: Select all items on this track ======
+      -- Step 2: Select all items on this track
       for j = 0, num_items - 1 do
         local item = reaper.GetTrackMediaItem(track, j)
         reaper.SetMediaItemSelected(item, true)
       end
       
-      -- ====== STEP 3: Heal splits ======
-      reaper.Main_OnCommand(40546, 0) -- Glue/Heal
+      -- Step 3: Heal splits
+      reaper.Main_OnCommand(40546, 0)
       
-      -- ====== STEP 4: Re-count after healing ======
+      -- Step 4: Re-count after healing
       local healed_items = reaper.CountTrackMediaItems(track)
       
-      -- ====== STEP 5: Apply crossfades & gain stage ======
+      -- Step 5: Apply crossfades & gain stage
       for j = 0, healed_items - 1 do
         local item = reaper.GetTrackMediaItem(track, j)
-        
-        -- Crossfade
         reaper.SetMediaItemInfo_Value(item, "D_FADEINLEN", config.crossfade_length)
         reaper.SetMediaItemInfo_Value(item, "D_FADEOUTLEN", config.crossfade_length)
-        
-        -- Select for normalization
         reaper.SetMediaItemSelected(item, true)
       end
       
-      -- ====== STEP 6: Normalize to 0dB ======
+      -- Step 6: Normalize to 0dB
       local num_selected = reaper.CountSelectedMediaItems(0)
       if num_selected > 0 then
         reaper.Main_OnCommand(40108, 0)
       end
       
-      -- ====== STEP 7: Scale to -18 dBFS ======
+      -- Step 7: Scale to target dBFS (-18 dBFS)
       local target_linear = 10 ^ (config.target_db / 20)
       for j = 0, healed_items - 1 do
         local item = reaper.GetTrackMediaItem(track, j)
@@ -308,16 +301,14 @@ local function process_items()
         reaper.SetMediaItemSelected(item, true)
       end
       
-      -- ====== STEP 8: Glue items together ======
-      if healed_items > 1 then
-        reaper.Main_OnCommand(41588, 0) -- Glue items
+      -- Step 8: Glue items together (acts on tracks with >= 1 item)
+      if healed_items >= 1 then
+        reaper.Main_OnCommand(41588, 0)
         total_glued = total_glued + 1
-        log_success(string.format("  %s: %d items glued → 1", track_name, healed_items))
-      elseif healed_items == 1 then
-        log_success(string.format("  %s: 1 item (no glue needed)", track_name))
+        log_success(string.format("  %s: processed & glued (%d item(s))", track_name, healed_items))
       end
       
-      -- ====== STEP 9: Rename glued item ======
+      -- Step 9: Rename glued item
       reaper.Main_OnCommand(40289, 0)
       local final_item = reaper.GetTrackMediaItem(track, 0)
       if final_item then
@@ -347,25 +338,22 @@ local function reset_tracks()
   local num_tracks = reaper.CountTracks(0)
   local deleted_count = 0
   
-  -- Iterate backwards for safe deletion
   for i = num_tracks - 1, 0, -1 do
     local track = reaper.GetTrack(0, i)
     local num_items = reaper.CountTrackMediaItems(track)
     local is_folder = reaper.GetMediaTrackInfo_Value(track, "I_FOLDERDEPTH") == 1
     local num_receives = reaper.GetTrackNumSends(track, -1)
     
-    -- Delete if empty AND not a folder AND no receives
     if num_items == 0 and not is_folder and num_receives == 0 and config.delete_empty_tracks then
       reaper.DeleteTrack(track)
       deleted_count = deleted_count + 1
     else
-      -- Reset all other tracks
-      reaper.SetMediaTrackInfo_Value(track, "B_MUTE", 0)           -- Unmute
-      reaper.SetMediaTrackInfo_Value(track, "C_BEATATTACHMODE", 0) -- Time basis
-      reaper.SetMediaTrackInfo_Value(track, "D_VOL", 1.0)          -- Unity gain
-      reaper.SetMediaTrackInfo_Value(track, "D_PAN", 0.0)          -- Center pan
-      reaper.SetMediaTrackInfo_Value(track, "B_MAINSEND", 1)       -- Master
-      reaper.SetMediaTrackInfo_Value(track, "I_AUTOMODE", 0)       -- Trim/Read
+      reaper.SetMediaTrackInfo_Value(track, "B_MUTE", 0)
+      reaper.SetMediaTrackInfo_Value(track, "C_BEATATTACHMODE", 0)
+      reaper.SetMediaTrackInfo_Value(track, "D_VOL", 1.0)
+      reaper.SetMediaTrackInfo_Value(track, "D_PAN", 0.0)
+      reaper.SetMediaTrackInfo_Value(track, "B_MAINSEND", 1)
+      reaper.SetMediaTrackInfo_Value(track, "I_AUTOMODE", 0)
     end
   end
   
@@ -423,33 +411,19 @@ local function main()
   
   log_header("MIX PREP & SESSION SANITIZER v4.1")
   
-  -- Pre-flight audit
   audit_session()
-  
-  -- Setup master
   setup_master_track()
-  
-  -- Clean automation
   cleanup_automation()
   
-  -- Offline FX
   if config.offline_all_fx then
     offline_all_track_fx()
   end
   
-  -- Clean routing
   cleanup_routing()
-  
-  -- Process items (heal, crossfade, gain stage, glue, rename)
   process_items()
-  
-  -- Reset & clean tracks
   reset_tracks()
-  
-  -- Post-flight audit
   audit_after()
   
-  -- Clear all selections
   reaper.Main_OnCommand(40289, 0)
   reaper.Main_OnCommand(40297, 0)
   
