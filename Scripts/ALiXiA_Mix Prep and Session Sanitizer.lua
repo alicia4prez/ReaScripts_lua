@@ -1,12 +1,11 @@
--- @description ALiXiA_Mix Prep and Session Sanitizer
--- @author ALiXia
--- @version 1.0.0
--- @about 
---   Mixing prep and session sanitizer
---   Session verificatiobn, cleans up tracks and folders
--- @changelog 
---    - Initial release
---   
+-- @description Digital Fingerprint
+-- @author ALiXiA
+-- @version 4.1
+-- @about
+--   Prepares a session for mixing by organizing tracks, 
+--   color-coding, and resetting faders.
+-- @changelog
+--   - Initial release under 4.1 to the community
 -- ==============================================================================
 -- Mix Prep & Session Sanitizer v4.1
 -- ==============================================================================
