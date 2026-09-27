@@ -1,11 +1,11 @@
 -- @description ALiXiA_Diatonic major minor mode transposer
 -- @author ALiXiA
--- @version 1.0
+-- @version 4.1
 -- @about
 --   Transposes a file from Root source and mode (GMin example)
 --   another Root Sourse and mode (C#Min)
 -- @changelog
---   - Initial release
+--   - METADATA change had not changed it from my template whoch listed it as v 1.0 ooops
 local function msg(text)
   reaper.ShowConsoleMsg(text .. "\n")
 end
