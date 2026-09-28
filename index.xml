@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="f798a0ecc63b433a6090d7b3b1ef106a41acd90d">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="9ecc749609b652bef37ef001f62d6846de032b2d">
   <category name="Scripts">
     <reapack name="ALiXiA_DIatonic major minor mode transposer2.lua" type="script" desc="ALiXiA_DIatonic major minor mode transposer2">
       <metadata>
@@ -46,6 +46,20 @@
       <version name="1.0.0" author="ALiXia" time="2026-09-22T09:41:21Z">
         <changelog><![CDATA[- Initial release]]></changelog>
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/53ccaefaf1be8e1157f82e16638094811d533a40/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Rea_PCM  Digital Audio Fingerprint.lua" type="script" desc="Digital Audio PCM Fingerprint (SHA-256 / MD5)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio, writes the hash to item notes, and drops a take marker at position 0:00.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/9ecc749609b652bef37ef001f62d6846de032b2d/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
       </version>
     </reapack>
     <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
