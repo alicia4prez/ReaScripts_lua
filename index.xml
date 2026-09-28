@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="1b98fb5db38d472951a42d7f5e34ad1d824a3528">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="267408f0f273f2393364547c1e24bf7c06f960b7">
   <category name="Scripts">
     <reapack name="ALiXiA_Diatonic major minor mode Transposer .lua" type="script" desc="ALiXiA_Diatonic major minor mode transposer">
       <metadata>
@@ -20,6 +20,21 @@
       <version name="1.0" author="ALiXiA" time="2026-09-22T09:26:07Z">
         <changelog><![CDATA[- Initial release]]></changelog>
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d9a094c8052b25470e78c1d757f4d3bb11dd6eac/Scripts/ALiXiA_Diatonic%20major%20minor%20mode%20Transposer%20.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_DIatonic major minor mode transposer.lua" type="script" desc="ALiXiA_DIatonic major minor mode transposer.lua">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 A simple tool that transposes any key or mode into another into another key or mode\par}
+}
+]]></description>
+      </metadata>
+      <version name="4.0" author="Rea and ALiXiA - The Reaper Queens" time="2026-09-28T00:44:36Z">
+        <changelog><![CDATA[intitial release under 4.0 to the community]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/267408f0f273f2393364547c1e24bf7c06f960b7/Scripts/ALiXiA_DIatonic%20major%20minor%20mode%20transposer.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Digital Fingerprint.lua" type="script" desc="Digital Fingerprint">
@@ -108,7 +123,7 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 (https://github.com/alicia4prez/ReaScripts_lua/raw/master/index.xml)\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Included Scripts\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Diatonic major minor mode transposer\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_DIatonic major minor mode transposer\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Session setup and ingestion\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Digital Fingerprint\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
