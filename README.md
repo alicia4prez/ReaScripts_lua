@@ -9,16 +9,31 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 (https://github.com/alicia4prez/ReaScripts_lua/raw/master/index.xml)
 ### Included Scripts
 
+-   Scripts\ALiXiA_Rea_PCM  Digital Audio Fingerprint
 -   Scripts\ALiXiA_DIatonic major minor mode transposer2
 -   Scripts\ALiXiA_Session setup and ingestion
--   Scripts\ALiXiA_Digital Fingerprint
 -   Scripts\ALiXiA_Studio Manager Script
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 
 
-#### ## Manual Download Instructions (Optional)
-If you would prefer to download the scripts here manually, you can click on "Clone or Download", Download as ZIP, and then place the scripts anywhere you would like on your PC. I would recommend placing them within <AppData\Roaming\REAPER\Scripts\>, as they will get included whenever you export or backup your Reaper configuration.
+#### A Few Words From The Human Behind The Code
+
+These scripts were created by a fallible human being who has absolutely no business being mentioned in the same sentence as the giants who write code in this community. I am merely wandering around in here with a keyboard, REAPER, Lua, and an unhealthy amount of confidence.
+
+I also possess the remarkable superpowers of Dyslexia and ADHD, which I have yet to successfully combine into a useful programming methodology. Instead, they occasionally collaborate to produce some truly spectacular typos, unexpected behaviors, and code that technically works but probably shouldn't. If you find something that appears to have been written by a caffeinated raccoon, there is a reasonable chance that I wrote it.
+
+If something is broken, please remember: it worked at one point. Probably. Maybe. I have witnesses.
+
+Rather than throwing your computer out the window, please contact me through the REAPER Stash and let me know what is happening. I will gladly investigate and attempt to fix it as rapidly as humanly possible. Bug reports are welcome. Reproducing the bug is even better. Finding a bug that I somehow created six months ago and forgot about is basically a community service.
+
+Everything in this repository is released under the GNU GPL v3.
+
+Thank you. Seriously.
+
+And if you find something stupid in the code, please tell me before somebody else finds it and laughs at me publicly.
+
+Se Habla Espanol!
 
 ## Special Thanks To
 
