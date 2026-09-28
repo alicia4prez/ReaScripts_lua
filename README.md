@@ -1,12 +1,17 @@
-# Alicia's Reaper Scripts
+# Alicia's Reaper Scripts (What is this madness)
 
-These are scripts I have personally done to better my workflow or have convinced others to aid me in writing them. The were born out of necessity from trying to simplify my mixing and mastering workflows, and they cover a vast array of tools from time tracking to performing repetitive tasks that I could automate to save me time in the log run. The scripts cover transposing engine for audio files, hash generating for file integrity verification (requires dspworker.py) as a dependency. Mixing preparation script that cleans tracks, sanitizes and glues audio and prepares the session to switch from production to mixing. 
+These are scripts that I have either personally written to make my own workflow less painful, or convinced other, considerably more talented people to help me write when I reached the point of saying, “There has to be a better way to do this.”
 
+Most of these scripts were born out of necessity, laziness, curiosity, or some combination of all three. The primary goal has been to simplify my mixing, mastering, and general REAPER workflow by automating the repetitive nonsense that computers are supposed to be doing for us anyway.
+
+The collection covers a fairly ridiculous variety of tasks, including time tracking, repetitive workflow automation, audio-file processing, mixing preparation, file-integrity verification, and other assorted tools designed to save time over the long run.
 ## Installing from my github repository 
 
 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:
 
 (https://github.com/alicia4prez/ReaScripts_lua/raw/master/index.xml)
+
+
 ### Included Scripts
 
 -   Scripts\ALiXiA_Rea_PCM  Digital Audio Fingerprint
