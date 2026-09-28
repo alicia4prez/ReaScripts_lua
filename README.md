@@ -9,7 +9,7 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 (https://github.com/alicia4prez/ReaScripts_lua/raw/master/index.xml)
 ### Included Scripts
 
--   Scripts\ALiXiA_DIatonic major minor mode transposer
+-   Scripts\ALiXiA_DIatonic major minor mode transposer2
 -   Scripts\ALiXiA_Session setup and ingestion
 -   Scripts\ALiXiA_Digital Fingerprint
 -   Scripts\ALiXiA_Studio Manager Script
