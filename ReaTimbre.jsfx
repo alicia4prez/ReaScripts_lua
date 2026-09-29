@@ -1,0 +1,132 @@
+desc: ReaTimbre - Dual-Band Router & Noise Carrier
+author: Rea & ALiXiA
+version: 1.1
+tags: A real time poly formant shaper for REAPER
+link: https://drive.google.com/file/d/1-QIAo-QhfeQ4ame3LPr5ae6EOoFO125e/view?usp=drive_link
+Screenshot: https://drive.google.com/file/d/1jT567g8lgTNXH63Fa8s7Pf-UhQ1CE-ye/view?usp=sharing
+/**
+about:
+    # A Real-Time Poly Formant Shaper for REAPER
+    eaTimbre is an attempt to give the REAPER community something *sort of* comparable to Z-Plane's **Timbre** — using REAPER's built-in **élastique** engine.
+    Before anyone gets too excited, though... there's a catch.
+    Timbre can shift formants by **±36 semitones**.
+    REAPER's élastique engine tops out at **±12 semitones**.
+    So no, this isn't secretly Timbre wearing a fake moustache. It's a much more modest attempt at doing something similar with tools REAPER already gives us.
+    That said, it's fun to mess with, and it may prove useful for things like getting the kick and
+     bass to play a little nicer together without resorting to increasingly complicated voodoo.
+
+     #The link above provides throrough documentation on how to setup and use. For those with less time on their day to read boring
+     and not so cear intructions, I have uploaded a track template at the reaper stash under the jsfx category as that is also included in a zip file for 
+     doanload with all thenecessary files and documentations.
+
+     If you like send us a donation to our paypal donor page. We gals need to buy makeup to hide the horrible black circles we have now from being up all night working on code
+     no one will probably use. https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+
+     */
+
+
+
+
+slider1:3000<50,15000,1>Crossover Split (Hz)
+slider2:0<-24,24,0.1>Low Shift (st)
+slider3:0<-24,24,0.1>High Shift (st)
+slider4:0<0,1,1{Unlinked,Linked}>Band Link
+slider5:1<0,1,1{Bypass,Active}>Low Band
+slider6:1<0,1,1{Bypass,Active}>High Band
+slider7:0<0,1,1{Off,Noise Carrier}>Carrier Mode
+slider8:0<0,100,0.5>Carrier Mix (%)
+slider9:100<0,100,0.5>Dry / Wet (%)
+
+in_pin:Input L
+in_pin:Input R
+out_pin:Low Band L
+out_pin:Low Band R
+out_pin:High Band L
+out_pin:High Band R
+out_pin:Carrier L
+out_pin:Carrier R
+
+@init
+b_lp_x1 = b_lp_x2 = b_lp_y1 = b_lp_y2 = 0;
+b_hp_x1 = b_hp_x2 = b_hp_y1 = b_hp_y2 = 0;
+env = 0;
+att = exp(-1 / (srate * 0.002));
+rel = exp(-1 / (srate * 0.050));
+
+@slider
+crossover_freq = slider1;
+low_shift = slider2;
+slider4 ? (slider3 = slider2); // Linked
+high_shift = slider3;
+low_active = slider5;
+high_active = slider6;
+carrier_mode = slider7;
+c_mix = slider8 * 0.01;
+dw_mix = slider9 * 0.01;
+
+// 4th-order Linkwitz-Riley crossover
+w0 = 2 * $pi * crossover_freq / srate;
+cos_w0 = cos(w0);
+sin_w0 = sin(w0);
+alpha = sin_w0 / (2 * 0.70710678);
+
+b0_lp = (1 - cos_w0) / 2;
+b1_lp = 1 - cos_w0;
+b2_lp = (1 - cos_w0) / 2;
+a0_lp = 1 + alpha;
+a1_lp = -2 * cos_w0;
+a2_lp = 1 - alpha;
+
+b0_hp = (1 + cos_w0) / 2;
+b1_hp = -(1 + cos_w0);
+b2_hp = (1 + cos_w0) / 2;
+a0_hp = 1 + alpha;
+a1_hp = -2 * cos_w0;
+a2_hp = 1 - alpha;
+
+inv_a0_lp = 1 / a0_lp;
+inv_a0_hp = 1 / a0_hp;
+
+@sample
+in_l = spl0;
+in_r = spl1;
+
+// Envelope Follower
+rect = max(abs(in_l), abs(in_r));
+env = rect > env ? (env * att + rect * (1 - att)) : (env * rel + rect * (1 - rel));
+
+// Linkwitz-Riley Filters
+lp_l1 = (b0_lp * in_l + b1_lp * xl1_1 + b2_lp * xl1_2 - a1_lp * yl1_1 - a2_lp * yl1_2) * inv_a0_lp;
+xl1_2 = xl1_1; xl1_1 = in_l; yl1_2 = yl1_1; yl1_1 = lp_l1;
+low_l = (b0_lp * lp_l1 + b1_lp * xl2_1 + b2_lp * xl2_2 - a1_lp * yl2_1 - a2_lp * yl2_2) * inv_a0_lp;
+xl2_2 = xl2_1; xl2_1 = lp_l1; yl2_2 = yl2_1; yl2_1 = low_l;
+
+hp_l1 = (b0_hp * in_l + b1_hp * xh1_1 + b2_hp * xh1_2 - a1_hp * yh1_1 - a2_hp * yh1_2) * inv_a0_hp;
+xh1_2 = xh1_1; xh1_1 = in_l; yh1_2 = yh1_1; yh1_1 = hp_l1;
+high_l = (b0_hp * hp_l1 + b1_hp * xh2_1 + b2_hp * xh2_2 - a1_hp * yh2_1 - a2_hp * yh2_2) * inv_a0_hp;
+xh2_2 = xh2_1; xh2_1 = hp_l1; yh2_2 = yh2_1; yh2_1 = high_l;
+
+lp_r1 = (b0_lp * in_r + b1_lp * xr1_1 + b2_lp * xr1_2 - a1_lp * yr1_1 - a2_lp * yr1_2) * inv_a0_lp;
+xr1_2 = xr1_1; xr1_1 = in_r; yr1_2 = yr1_1; yr1_1 = lp_r1;
+low_r = (b0_lp * lp_r1 + b1_lp * xr2_1 + b2_lp * xr2_2 - a1_lp * yr2_1 - a2_lp * yr2_2) * inv_a0_lp;
+xr2_2 = xr2_1; xr2_1 = lp_r1; yr2_2 = yr2_1; yr2_1 = low_r;
+
+hp_r1 = (b0_hp * in_r + b1_hp * xrh1_1 + b2_hp * xrh1_2 - a1_hp * yrh1_1 - a2_hp * yrh1_2) * inv_a0_hp;
+xrh1_2 = xrh1_1; xrh1_1 = in_r; yrh1_2 = yrh1_1; yrh1_1 = hp_r1;
+high_r = (b0_hp * hp_r1 + b1_hp * xrh2_1 + b2_hp * xrh2_2 - a1_hp * yrh2_1 - a2_hp * yrh2_2) * inv_a0_hp;
+xrh2_2 = xrh2_1; xrh2_1 = hp_r1; yrh2_2 = yrh2_1; yrh2_1 = high_r;
+
+// Carrier
+carrier_l = 0; carrier_r = 0;
+carrier_mode ? (
+  carrier_l = (rand(2) - 1.0) * env * c_mix;
+  carrier_r = (rand(2) - 1.0) * env * c_mix;
+);
+
+// Pin Routing
+spl0 = low_active ? low_l : 0;
+spl1 = low_active ? low_r : 0;
+spl2 = high_active ? high_l : 0;
+spl3 = high_active ? high_r : 0;
+spl4 = carrier_l;
+spl5 = carrier_r;
