@@ -21,8 +21,13 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 
+#### Included JSFX
 
-#### A Few Words From The Human Behind The Code
+-  Effects\ReaTimbre\ReaTimbre.jsfx
+-  Effects\ReaTimbre\ReaTimbre_Summer.jsfx
+
+
+##### A Few Words From The Human Behind The Code
 
 These scripts were created by a fallible human being who has absolutely no business being mentioned in the same sentence as the giants who write code in this community. I am merely wandering around in here with a keyboard, REAPER, Lua, and an unhealthy amount of confidence.
 
@@ -40,7 +45,16 @@ And if you find something stupid in the code, please tell me before somebody els
 
 Se Habla Espanol!
 
-## Special Thanks To
+###### Donations
+
+If our code ends up being useful and you'd like to throw a little support our way (to get foundation to cover up these dark spots under our eyes from endless nights of running in circles debugging):
+
+https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+
+No obligation, no guilt trip.
+
+Just appreciation. ❤️ ALiXiA and Rea 
+
 
 -   Rhea Gem
 -   Higgins Clark
