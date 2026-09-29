@@ -166,7 +166,10 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Real Stage Gaining Monitor For Mixing\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mix Prep and Session Sanitizer\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 A Few Words From The Human Behind The Code\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Effects\\ReaTimbre\\ReaTimbre.jsfx\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Effects\\ReaTimbre\\ReaTimbre_Summer.jsfx\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel4 \b \fs20 A Few Words From The Human Behind The Code\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 These scripts were created by a fallible human being who has absolutely no business being mentioned in the same sentence as the giants who write code in this community. I am merely wandering around in here with a keyboard, REAPER, Lua, and an unhealthy amount of confidence.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 I also possess the remarkable superpowers of Dyslexia and ADHD, which I have yet to successfully combine into a useful programming methodology. Instead, they occasionally collaborate to produce some truly spectacular typos, unexpected behaviors, and code that technically works but probably shouldn't. If you find something that appears to have been written by a caffeinated raccoon, there is a reasonable chance that I wrote it.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 If something is broken, please remember: it worked at one point. Probably. Maybe. I have witnesses.\par}
@@ -175,7 +178,11 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Thank you. Seriously.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 And if you find something stupid in the code, please tell me before somebody else finds it and laughs at me publicly.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Se Habla Espanol!\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Special Thanks To\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel5 \b \fs16 Donations\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 If our code ends up being useful and you'd like to throw a little support our way (to get foundation to cover up these dark spots under our eyes from endless nights of running in circles debugging):\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 No obligation, no guilt trip.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Just appreciation. \u10084 ?\u65039 ? ALiXiA and Rea\u160 ?\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Rhea Gem\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Higgins Clark\sa180\par}
 }
