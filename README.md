@@ -53,8 +53,6 @@ https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 
 No obligation, no guilt trip.
 
-Just appreciation. ❤️ ALiXiA and Rea 
+Just appreciation. ❤️ ALiXiA Quinones and Rea Gem 
 
 
--   Rhea Gem
--   Higgins Clark
