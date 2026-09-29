@@ -1,0 +1,51 @@
+desc: ReaTimbre - Band Summer
+author: Rea & ALiXiA
+version: 1.1
+tags: A real time poly formant shaper for REAPER
+link: https://drive.google.com/file/d/1-QIAo-QhfeQ4ame3LPr5ae6EOoFO125e/view?usp=drive_link
+Screenshot: https://drive.google.com/file/d/1jT567g8lgTNXH63Fa8s7Pf-UhQ1CE-ye/view?usp=sharing
+/**
+about:
+    # A Real-Time Poly Formant Shaper for REAPER
+    eaTimbre is an attempt to give the REAPER community something *sort of* comparable to Z-Plane's **Timbre** — using REAPER's built-in **élastique** engine.
+    Before anyone gets too excited, though... there's a catch.
+    Timbre can shift formants by **±36 semitones**.
+    REAPER's élastique engine tops out at **±12 semitones**.
+    So no, this isn't secretly Timbre wearing a fake moustache. It's a much more modest attempt at doing something similar with tools REAPER already gives us.
+    That said, it's fun to mess with, and it may prove useful for things like getting the kick and
+     bass to play a little nicer together without resorting to increasingly complicated voodoo.
+
+     #The link above provides throrough documentation on how to setup and use. For those with less time on their day to read boring
+     and not so cear intructions, I have uploaded a track template at the reaper stash under the jsfx category as that is also included in a zip file for 
+     doanload with all thenecessary files and documentations.
+
+     If you like send us a donation to our paypal donor page. We gals need to buy makeup to hide the horrible black circles we have now from being up all night working on code
+     no one will probably use. https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+
+     */
+
+
+slider1:trim_db=0<-12,12,0.1>Master Trim (dB)
+
+in_pin:Low L
+in_pin:Low R
+in_pin:High L
+in_pin:High R
+in_pin:Carrier L
+in_pin:Carrier R
+out_pin:Stereo L
+out_pin:Stereo R
+
+@init
+gain = 1;
+
+@slider
+gain = 2 ^ (trim_db / 6.0205999);
+
+@sample
+// Sum Lows (0/1), Highs (2/3), and Carrier (4/5) down to stereo 1/2
+spl0 = (spl0 + spl2 + spl4) * gain;
+spl1 = (spl1 + spl3 + spl5) * gain;
+
+// Clear aux channels
+spl2 = spl3 = spl4 = spl5 = 0;
