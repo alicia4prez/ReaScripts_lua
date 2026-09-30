@@ -166,9 +166,6 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Real Stage Gaining Monitor For Mixing\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mix Prep and Session Sanitizer\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Effects\\ReaTimbre\\ReaTimbre.jsfx\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Effects\\ReaTimbre\\ReaTimbre_Summer.jsfx\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel4 \b \fs20 A Few Words From The Human Behind The Code\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 These scripts were created by a fallible human being who has absolutely no business being mentioned in the same sentence as the giants who write code in this community. I am merely wandering around in here with a keyboard, REAPER, Lua, and an unhealthy amount of confidence.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 I also possess the remarkable superpowers of Dyslexia and ADHD, which I have yet to successfully combine into a useful programming methodology. Instead, they occasionally collaborate to produce some truly spectacular typos, unexpected behaviors, and code that technically works but probably shouldn't. If you find something that appears to have been written by a caffeinated raccoon, there is a reasonable chance that I wrote it.\par}
