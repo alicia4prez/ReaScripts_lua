@@ -1,47 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d09f69d0e3da53b54808a92d378759e10e70d237">
-  <category name="Effects/ReaTimbre">
-    <reapack name="ReaTimbre.jsfx" type="effect" desc="ReaTimbre">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 A Real-Time Poly Formant Shaper for REAPER\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 eaTimbre is an attempt to give the REAPER community something {\i sort of} comparable to Z-Plane's {\b Timbre} \u8212- using REAPER's built-in {\b \u233 ?lastique} engine. Before anyone gets too excited, though... there's a catch. Timbre can shift formants by {\b \u177 ?36 semitones}. REAPER's \u233 ?lastique engine tops out at {\b \u177 ?12 semitones}. So no, this isn't secretly Timbre wearing a fake moustache. It's a much more modest attempt at doing something similar with tools REAPER already gives us. That said, it's fun to mess with, and it may prove useful for things like getting the kick and bass to play a little nicer together without resorting to increasingly complicated voodoo.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 #The link above provides throrough documentation on how to setup and use. For those with less time on their day to read boring and not so cear intructions, I have uploaded a track template at the reaper stash under the jsfx category as that is also included in a zip file for doanload with all thenecessary files and documentations.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 If you like send us a donation to our paypal donor page. We gals need to buy makeup to hide the horrible black circles we have now from being up all night working on code no one will probably use. https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 */\par}
-}
-]]></description>
-        <link rel="website">https://drive.google.com/file/d/1-QIAo-QhfeQ4ame3LPr5ae6EOoFO125e/view?usp=drive_link</link>
-        <link rel="screenshot">https://drive.google.com/file/d/1jT567g8lgTNXH63Fa8s7Pf-UhQ1CE-ye/view?usp=sharing</link>
-      </metadata>
-      <version name="1.1" author="Rea &amp; ALiXiA" time="2026-09-29T05:57:38Z">
-        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/a9ced67a82c2bebf1300d7f6cd4c85a0e46ab122/Effects/ReaTimbre/ReaTimbre.jsfx</source>
-      </version>
-    </reapack>
-    <reapack name="ReaTimbre_Summer.jsfx" type="effect" desc="ReaTimbre - Band Summer">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 A Real-Time Poly Formant Shaper for REAPER\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 eaTimbre is an attempt to give the REAPER community something {\i sort of} comparable to Z-Plane's {\b Timbre} \u8212- using REAPER's built-in {\b \u233 ?lastique} engine. Before anyone gets too excited, though... there's a catch. Timbre can shift formants by {\b \u177 ?36 semitones}. REAPER's \u233 ?lastique engine tops out at {\b \u177 ?12 semitones}. So no, this isn't secretly Timbre wearing a fake moustache. It's a much more modest attempt at doing something similar with tools REAPER already gives us. That said, it's fun to mess with, and it may prove useful for things like getting the kick and bass to play a little nicer together without resorting to increasingly complicated voodoo.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 #The link above provides throrough documentation on how to setup and use. For those with less time on their day to read boring and not so cear intructions, I have uploaded a track template at the reaper stash under the jsfx category as that is also included in a zip file for doanload with all thenecessary files and documentations.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 If you like send us a donation to our paypal donor page. We gals need to buy makeup to hide the horrible black circles we have now from being up all night working on code no one will probably use. https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 */\par}
-}
-]]></description>
-        <link rel="website">https://drive.google.com/file/d/1-QIAo-QhfeQ4ame3LPr5ae6EOoFO125e/view?usp=drive_link</link>
-        <link rel="screenshot">https://drive.google.com/file/d/1jT567g8lgTNXH63Fa8s7Pf-UhQ1CE-ye/view?usp=sharing</link>
-      </metadata>
-      <version name="1.1" author="Rea &amp; ALiXiA" time="2026-09-29T05:58:01Z">
-        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/815b8cac496522811c576be31c366a6750f27cd6/Effects/ReaTimbre/ReaTimbre_Summer.jsfx</source>
-      </version>
-    </reapack>
-  </category>
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="0f387db8bd21294a483346301da55aee63e468d0">
   <category name="Scripts">
     <reapack name="ALiXiA_DIatonic major minor mode transposer2.lua" type="script" desc="ALiXiA_DIatonic major minor mode transposer2">
       <metadata>
