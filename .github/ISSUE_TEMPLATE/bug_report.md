@@ -2,8 +2,9 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
-assignees: ''
+labels: bug
+assignees: alicia4prez
+type: Bug
 
 ---
 
@@ -12,10 +13,10 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. Go to 'Reaper'
+2. Click on 'Actions'
+3. Scroll down to 'Show Action List -> FInd The Script (It will Start with ALiXiA_*) and run it.'
+4. Record error fromReaTerminal. Thank!
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.

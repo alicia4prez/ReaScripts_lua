@@ -1,9 +1,11 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for this project - Doubtful I have time and it probably is
+  already done by someone else but amuse me.
 title: ''
-labels: ''
-assignees: ''
+labels: enhancement
+assignees: alicia4prez
+type: Feature
 
 ---
 
