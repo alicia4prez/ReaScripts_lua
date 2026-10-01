@@ -34,7 +34,7 @@ If something is broken, please remember: it worked at one point. Probably. Maybe
 
 Rather than throwing your computer out the window, please contact me through the REAPER Stash and let me know what is happening. I will gladly investigate and attempt to fix it as rapidly as humanly possible. Bug reports are welcome. Reproducing the bug is even better. Finding a bug that I somehow created six months ago and forgot about is basically a community service.
 
-Everything in this repository is released under the GNU GPL v3.
+Everything in this repository is released under the MIT License.
 
 Thank you. Seriously.
 
