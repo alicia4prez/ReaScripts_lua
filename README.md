@@ -21,8 +21,8 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 
-
-
+#### Included JSFX
+- Jsfx/Alixia_VoiceofGod.jsfx
 
 ##### A Few Words From The Human Behind The Code
 
