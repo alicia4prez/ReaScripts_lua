@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="0f387db8bd21294a483346301da55aee63e468d0">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="ffeef16e9747f12e1315ce2af95309d339834a3a">
   <category name="Scripts">
     <reapack name="ALiXiA_DIatonic major minor mode transposer2.lua" type="script" desc="ALiXiA_DIatonic major minor mode transposer2">
       <metadata>
@@ -91,15 +91,6 @@
       </version>
     </reapack>
     <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Time tracker and session note. Metadata and time calculator for billing\par}
-}
-]]></description>
-      </metadata>
       <version name="2.7" author="REA the Reaper Queen" time="2026-09-21T23:06:49Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
       </version>
