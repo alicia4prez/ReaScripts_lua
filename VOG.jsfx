@@ -1,0 +1,102 @@
+desc:Alixia Voice of God (Bass Resonance Enhancer)
+// Author: Custom JSFX
+// Based on the Little Labs VOG concept: Resonant low-end focus & sub attenuation.
+
+slider1:freq(40)<20,300,1>Target Frequency (Hz)
+slider2:amp(6)<0,18,0.1>Amplitude / Boost (dB)
+slider3:mode(0)<0,3,1{40 Hz Sub/808,42 Hz Tight Kick,100 Hz Bass/Vocals,200 Hz Body/Snare}>Preset Focus Range
+slider4:flat(0)<0,1,1{Active,Flat (Bypass Processing)}>Bypass / Flat
+
+in_pin:left input
+in_pin:right input
+out_pin:left output
+out_pin:right output
+
+@init
+ext_tail_size = 2;
+
+pi = $pi;
+
+@slider
+
+mode == 0 ? ( base_f = 40; );
+mode == 1 ? ( base_f = 42; );
+mode == 2 ? ( base_f = 100; );
+mode == 3 ? ( base_f = 200; );
+
+
+target_f = freq;
+
+
+omega = 2 * pi * target_f / srate;
+sin_o = sin(omega);
+cos_o = cos(omega);
+
+
+Q = 2.5; 
+alpha = sin_o / (2 * Q);
+
+
+A = 10.0^(amp / 40.0);
+b0_p = 1 + alpha * A;
+b1_p = -2 * cos_o;
+b2_p = 1 - alpha * A;
+a0_p = 1 + alpha / A;
+b0 = b0_p / a0_p;
+b1 = b1_p / a0_p;
+b2 = b2_p / a0_p;
+a1 = (-2 * cos_o) / a0_p;
+a2 = (1 - alpha / A) / a0_p;
+
+
+hp_b0 = (1 - cos_o) / 2;
+hp_b1 = 1 - cos_o;
+hp_b2 = (1 - cos_o) / 2;
+hp_a0 = 1 + alpha;
+hp_a1 = -2 * cos_o;
+hp_a2 = 1 - alpha;
+
+hb0 = hp_b0 / hp_a0;
+hb1 = hp_b1 / hp_a0;
+hb2 = hp_b2 / hp_a0;
+ha1 = hp_a1 / hp_a0;
+ha2 = hp_a2 / hp_a0;
+
+@sample
+flat == 0 ? (
+  
+  // High-pass stage 1
+  l_hp1 = hb0 * s0 + l_z1_1;
+  l_z1_1 = hb1 * s0 - ha1 * l_hp1 + l_z2_1;
+  l_z2_1 = hb2 * s0 - ha2 * l_hp1;
+  
+  // High-pass stage 2 (-24 dB/oct total slope below target frequency)
+  l_hp2 = hb0 * l_hp1 + l_z1_2;
+  l_z1_2 = hb1 * l_hp1 - ha1 * l_hp2 + l_z2_2;
+  l_z2_2 = hb2 * l_hp1 - ha2 * l_hp2;
+
+  // Peak / Resonance boost stage at the target frequency boundary
+  l_out = b0 * l_hp2 + l_peak_z1;
+  l_peak_z1 = b1 * l_hp2 - a1 * l_out + l_peak_z2;
+  l_peak_z2 = b2 * l_hp2 - a2 * l_out;
+
+  // Right Channel Processing
+  r_hp1 = hb0 * s1 + r_z1_1;
+  r_z1_1 = hb1 * s1 - ha1 * r_hp1 + r_z2_1;
+  r_z2_1 = hb2 * s1 - ha2 * r_hp1;
+  
+  r_hp2 = hb0 * r_hp1 + r_z1_2;
+  r_z1_2 = hb1 * r_hp1 - ha1 * r_hp2 + r_z2_2;
+  r_z2_2 = hb2 * r_hp1 - ha2 * r_hp2;
+
+  r_out = b0 * r_hp2 + r_peak_z1;
+  r_peak_z1 = b1 * r_hp2 - a1 * r_out + r_peak_z2;
+  r_peak_z2 = b2 * r_hp2 - a2 * r_out;
+
+  spl0 = l_out;
+  spl1 = r_out;
+):(
+  // Flat / Bypass mode
+  spl0 = spl0;
+  spl1 = spl1;
+);
