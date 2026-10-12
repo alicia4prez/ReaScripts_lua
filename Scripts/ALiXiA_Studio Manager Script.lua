@@ -1,11 +1,9 @@
 -- @description REA Studio Manager (Project, Track, & Time Tracker) v2.7 FIXED
 -- @author ALiXiA Gregory
 -- @version 2.7
--- @about
--- Time tracker and session note. Metadata
--- and time calculator for billing
+-- @aboutTime tracker and session note. Metadata
 -- @changelog
---   - Initial release
+--  - Initial release
 
 local r = reaper
 
