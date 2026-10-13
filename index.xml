@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="ffeef16e9747f12e1315ce2af95309d339834a3a">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d9953159393137921dbd565945c194756da87a30">
+  <category name="JSFX">
+    <reapack name="Alixia_VoiceofGod.jsfx" type="effect" desc="ALiXiA Voice of God (Bass Resonance Enhancer)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Based on Little lAbs VOG concep: Resonant low-end focus and sub attenuation.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0" author="ALiXiA and REA" time="2026-10-13T00:13:36Z">
+        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/d9953159393137921dbd565945c194756da87a30/JSFX/Alixia_VoiceofGod.jsfx</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Scripts">
     <reapack name="ALiXiA_DIatonic major minor mode transposer2.lua" type="script" desc="ALiXiA_DIatonic major minor mode transposer2">
       <metadata>
