@@ -1,6 +1,19 @@
-desc:Alixia Voice of God (Bass Resonance Enhancer)
-// Author: Custom JSFX
-// Based on the Little Labs VOG concept: Resonant low-end focus & sub attenuation.
+/**
+ * JSFX Name: ALiXiA Voice of God (Bass Resonance Enhancer)
+ * About: Based on Little lAbs VOG concep: Resonant low-end focus and sub attenuation.
+ * Author: ALiXiA and REA
+ * Author URI: https://a4pz.com
+ * Donation: https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+ * Licence: M.I.T License
+ * REAPER: 7.0
+ * Version: 1.0
+ */
+
+/**
+ * Changelog:
+ * v1.0 (2026-10-12)
+  + Initial Release
+ */
 
 slider1:freq(40)<20,300,1>Target Frequency (Hz)
 slider2:amp(6)<0,18,0.1>Amplitude / Boost (dB)
