@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d9953159393137921dbd565945c194756da87a30">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="0971ec2554b80f2872194fe2b5ad9fa68480f8d2">
   <category name="JSFX">
     <reapack name="Alixia_VoiceofGod.jsfx" type="effect" desc="ALiXiA Voice of God (Bass Resonance Enhancer)">
       <metadata>
@@ -47,22 +47,19 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/71a6fde2f0680c6eba1737a75a47b390a13a40f1/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="Mix Prep &amp; Session Sanitizer">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Prepares a session for mixing by organizing tracks, gain staging items, cleaning routing, and resetting faders.\par}
-}
-]]></description>
-      </metadata>
+    <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
       <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
       </version>
       <version name="1.0.0" author="ALiXia" time="2026-09-22T09:41:21Z">
         <changelog><![CDATA[- Initial release]]></changelog>
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/53ccaefaf1be8e1157f82e16638094811d533a40/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+      <version name="4.2" author="ALiXiA Gregory" time="2026-10-18T06:22:48Z">
+        <changelog><![CDATA[+ Preserve Bass folders and all nested child tracks from deletion
++ Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
++ Preserve folder closure depth (I_FOLDERDEPTH) when deleting empty tracks inside other folders]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/0971ec2554b80f2872194fe2b5ad9fa68480f8d2/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Rea_PCM  Digital Audio Fingerprint.lua" type="script" desc="Digital Audio PCM Fingerprint (SHA-256 / MD5)">
