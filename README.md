@@ -20,9 +20,11 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\ALiXiA_Studio Manager Script
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
+-   Scripots\AliXiA_Mau P Companion
 
 #### Included JSFX
-- Jsfx/Alixia_VoiceofGod.jsfx
+- Jsfx\Alixia_VoiceofGod.jsfx
+- Jsfx\ALiXiA_Mau P Effect
 
 ##### A Few Words From The Human Behind The Code
 
