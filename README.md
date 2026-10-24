@@ -24,7 +24,7 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 
 #### Included JSFX
 - Jsfx\Alixia_VoiceofGod.jsfx
-- Jsfx\ALiXiA_Mau P Effect
+- Jsfx\ALiXiA_Mau P Effect.jsfx
 
 ##### A Few Words From The Human Behind The Code
 
