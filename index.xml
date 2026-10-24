@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="0971ec2554b80f2872194fe2b5ad9fa68480f8d2">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="7fd23ffc05a4c9d8bf901a9953e41e2c1c031b89">
   <category name="JSFX">
     <reapack name="Alixia_VoiceofGod.jsfx" type="effect" desc="ALiXiA Voice of God (Bass Resonance Enhancer)">
       <metadata>
@@ -14,6 +14,22 @@
       </metadata>
       <version name="1.0" author="ALiXiA and REA" time="2026-10-13T00:13:36Z">
         <source>https://github.com/alicia4prez/ReaScripts_lua/raw/d9953159393137921dbd565945c194756da87a30/JSFX/Alixia_VoiceofGod.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="Mau_P Effect.jsfx" type="effect" desc="Mau_P Effect (Generate A Massive Drop)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inspired By Mau P Drugs From Amsterdam\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0" author="ALiXiA and REA" time="2026-10-24T05:32:55Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/7fd23ffc05a4c9d8bf901a9953e41e2c1c031b89/JSFX/Mau_P%20Effect.jsfx</source>
       </version>
     </reapack>
   </category>
@@ -132,7 +148,7 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripots\\AliXiA_Mau P COmpanion\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\Alixia_VoiceofGod.jsfx\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\ALiXiA_Mau P Effect\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\Mau_P Effect.jsfx\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel4 \b \fs20 A Few Words From The Human Behind The Code\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 These scripts were created by a fallible human being who has absolutely no business being mentioned in the same sentence as the giants who write code in this community. I am merely wandering around in here with a keyboard, REAPER, Lua, and an unhealthy amount of confidence.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 I also possess the remarkable superpowers of Dyslexia and ADHD, which I have yet to successfully combine into a useful programming methodology. Instead, they occasionally collaborate to produce some truly spectacular typos, unexpected behaviors, and code that technically works but probably shouldn't. If you find something that appears to have been written by a caffeinated raccoon, there is a reasonable chance that I wrote it.\par}
