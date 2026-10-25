@@ -1,0 +1,148 @@
+/**
+ * JSFX Name: ALiXiA_AKG361 Calibration
+ * About: Tool with 2 Calibration files and extras
+ * Author: ALiXiA and REA
+ * Author URI: https://a4pz.com
+ * Donation: https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+ * Licence: M.I.T License
+ * REAPER: 7.0
+ * Version: 1.0
+ */
+
+/**
+ * Changelog:
+ * v1.0 (2026-10-12)
+  + Initial Release
+ */
+
+slider1:1<0,1,1{Bypass (Raw K361),Calibrated (Active)}>Calibration Power
+slider2:0<0,1,1{AutoEQ 10-Band Harman Target,Oratory1990 5-Band Surgical Studio}>Calibration Profile
+slider3:100<0,150,1>Correction Amount (%)
+slider4:1<0,1,1{Auto Safe Preamp (-5.8 / -6.2 dB),Manual Preamp Only}>Headroom Protection
+slider5:0<-12,12,0.1>Manual Output Trim (dB)
+
+@init
+ext_noinit = 1;
+pi = $pi;
+
+// Memory layout for up to 10 stereo biquad filters (11 slots per band)
+// [0]=b0, [1]=b1, [2]=b2, [3]=a1, [4]=a2, [5]=x1L, [6]=x2L, [7]=y1L, [8]=y2L, [9]=x1R, [10]=x2R
+
+function set_biquad(band_idx, type, freq, gain_db, Q)
+local(idx, A, w0, cos_w0, sin_w0, alpha, sqA2a, b0, b1, b2, a0, a1, a2)
+(
+  idx = band_idx * 16;
+  gain_db = gain_db * (slider3 / 100.0);
+  
+  abs(gain_db) < 0.001 ? (
+    idx[0] = 1.0; idx[1] = 0.0; idx[2] = 0.0; idx[3] = 0.0; idx[4] = 0.0;
+  ) : (
+    A = 10^(gain_db / 40.0);
+    w0 = 2.0 * pi * freq / srate;
+    cos_w0 = cos(w0);
+    sin_w0 = sin(w0);
+    alpha = sin_w0 / (2.0 * Q);
+
+    type == 0 ? ( // Peaking EQ
+      b0 = 1.0 + alpha * A;
+      b1 = -2.0 * cos_w0;
+      b2 = 1.0 - alpha * A;
+      a0 = 1.0 + alpha / A;
+      a1 = -2.0 * cos_w0;
+      a2 = 1.0 - alpha / A;
+    ) : type == 1 ? ( // Low Shelf
+      sqA2a = 2.0 * sqrt(A) * alpha;
+      b0 = A * ((A + 1.0) - (A - 1.0) * cos_w0 + sqA2a);
+      b1 = 2.0 * A * ((A - 1.0) - (A + 1.0) * cos_w0);
+      b2 = A * ((A + 1.0) - (A - 1.0) * cos_w0 - sqA2a);
+      a0 = (A + 1.0) + (A - 1.0) * cos_w0 + sqA2a;
+      a1 = -2.0 * ((A - 1.0) + (A + 1.0) * cos_w0);
+      a2 = (A + 1.0) + (A - 1.0) * cos_w0 - sqA2a;
+    ) : ( // High Shelf
+      sqA2a = 2.0 * sqrt(A) * alpha;
+      b0 = A * ((A + 1.0) + (A - 1.0) * cos_w0 + sqA2a);
+      b1 = -2.0 * A * ((A - 1.0) + (A + 1.0) * cos_w0);
+      b2 = A * ((A + 1.0) + (A - 1.0) * cos_w0 - sqA2a);
+      a0 = (A + 1.0) - (A - 1.0) * cos_w0 + sqA2a;
+      a1 = 2.0 * ((A - 1.0) - (A + 1.0) * cos_w0);
+      a2 = (A + 1.0) - (A - 1.0) * cos_w0 - sqA2a;
+    );
+
+    idx[0] = b0 / a0;
+    idx[1] = b1 / a0;
+    idx[2] = b2 / a0;
+    idx[3] = a1 / a0;
+    idx[4] = a2 / a0;
+  );
+);
+
+function process_band(band_idx)
+local(idx, b0, b1, b2, a1, a2, inL, inR, outL, outR)
+(
+  idx = band_idx * 16;
+  b0 = idx[0]; b1 = idx[1]; b2 = idx[2]; a1 = idx[3]; a2 = idx[4];
+
+  inL = spl0;
+  outL = b0 * inL + b1 * idx[5] + b2 * idx[6] - a1 * idx[7] - a2 * idx[8];
+  idx[6] = idx[5]; idx[5] = inL;
+  idx[8] = idx[7]; idx[7] = outL;
+  spl0 = outL;
+
+  inR = spl1;
+  outR = b0 * inR + b1 * idx[9] + b2 * idx[10] - a1 * idx[11] - a2 * idx[12];
+  idx[10] = idx[9]; idx[9] = inR;
+  idx[12] = idx[11]; idx[11] = outR;
+  spl1 = outR;
+);
+
+function update_filters()
+local(auto_pre_db, total_db)
+(
+  slider2 == 0 ? (
+    // Profile 0: AutoEQ 10-Band Harman Target (Oratory1990 Measurement)
+    num_bands = 10;
+    auto_pre_db = -5.8 * (slider3 / 100.0);
+    set_biquad(0, 1, 105,   -2.3, 0.70); // Low Shelf
+    set_biquad(1, 0, 149,   -3.3, 1.47); // Peak
+    set_biquad(2, 0, 4019,   5.9, 2.87); // Peak (4kHz dip recovery)
+    set_biquad(3, 0, 75,     1.3, 2.02); // Peak
+    set_biquad(4, 0, 42,    -1.4, 1.64); // Peak
+    set_biquad(5, 2, 10000, -1.2, 0.70); // High Shelf
+    set_biquad(6, 0, 2560,  -1.0, 2.54); // Peak
+    set_biquad(7, 0, 378,    0.7, 1.79); // Peak
+    set_biquad(8, 0, 7330,   2.4, 5.94); // Peak
+    set_biquad(9, 0, 1338,  -1.0, 2.72); // Peak
+  ) : (
+    // Profile 1: Oratory1990 5-Band Surgical Studio Curve
+    num_bands = 5;
+    auto_pre_db = -6.2 * (slider3 / 100.0);
+    set_biquad(0, 0, 145,  -2.4, 1.30); // Clean upper-bass bloom
+    set_biquad(1, 0, 400,   0.4, 0.50); // Lower-mid body
+    set_biquad(2, 0, 1250, -2.0, 1.00); // Tame 1.25kHz forwardness
+    set_biquad(3, 0, 3960,  6.5, 3.00); // Restore 4kHz presence dip
+    set_biquad(4, 0, 9300, -9.0, 4.00); // Tame 9.3kHz treble spike
+  );
+
+  total_db = slider5 + (slider4 == 0 ? auto_pre_db : 0.0);
+  lin_gain = 10^(total_db / 20.0);
+);
+
+@slider
+update_filters();
+
+@block
+srate != last_srate ? (
+  last_srate = srate;
+  update_filters();
+);
+
+@sample
+slider1 == 1 ? (
+  spl0 *= lin_gain;
+  spl1 *= lin_gain;
+  i = 0;
+  loop(num_bands,
+    process_band(i);
+    i += 1;
+  );
+);
