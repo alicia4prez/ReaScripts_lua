@@ -1,0 +1,237 @@
+/**
+ * JSFX Name: ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)
+ * About: Inspired By Mau P Drugs From Amsterdam
+ * Author: ALiXiA and REA
+ * Author URI: https://a4pz.com
+ * Donation: https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+ * Licence: M.I.T License
+ * REAPER: 7.0
+ * Version: 1.0
+ */
+
+/**
+ * Changelog:
+ * v1.0 (2026-10-12)
+  + Initial Release
+ */
+
+slider1:0<0,100,0.1>TENSION MACRO (%)
+slider2:220<80,450,1>Max Build-Up HPF Cutoff (Hz)
+slider3:200<100,350,1>Max High-Band Width (%)
+slider4:3.5<0,9,0.1>Max Air Shelf Boost (dB @ 6kHz)
+slider5:-1.5<-4,0,0.1>Max Build-Up Volume Trim (dB)
+slider6:120<60,200,1>Drop Sub-Mono Cutoff (Hz)
+slider7:1<0,1,1{True Bypass at 0%,Keep Sub-Mono Active at 0%}>Drop (0%) Mode
+
+@init
+pi = $pi;
+
+// Allocate delay buffers for mono-compatible Haas Side synthesis (~20ms max)
+buf_size = 4096;
+delay_buf_L = 0;
+delay_buf_R = 4096;
+write_pos = 0;
+
+smooth_macro = slider1 / 100;
+
+// 2nd-order Butterworth High-Pass Filter
+function calc_hp(freq, q) instance(b0, b1, b2, a1, a2) local(w0, cosw0, sinw0, alpha, a0) (
+  freq = min(max(freq, 15), srate * 0.45);
+  w0 = 2 * pi * freq / srate;
+  cosw0 = cos(w0);
+  sinw0 = sin(w0);
+  alpha = sinw0 / (2 * q);
+  
+  a0 = 1 + alpha;
+  b0 = ((1 + cosw0) * 0.5) / a0;
+  b1 = -(1 + cosw0) / a0;
+  b2 = ((1 + cosw0) * 0.5) / a0;
+  a1 = (-2 * cosw0) / a0;
+  a2 = (1 - alpha) / a0;
+);
+
+// 2nd-order Butterworth Low-Pass Filter
+function calc_lp(freq) instance(b0, b1, b2, a1, a2) local(w0, cosw0, sinw0, alpha, a0) (
+  freq = min(max(freq, 15), srate * 0.45);
+  w0 = 2 * pi * freq / srate;
+  cosw0 = cos(w0);
+  sinw0 = sin(w0);
+  alpha = sinw0 / sqrt(2);
+  
+  a0 = 1 + alpha;
+  b0 = ((1 - cosw0) * 0.5) / a0;
+  b1 = (1 - cosw0) / a0;
+  b2 = ((1 - cosw0) * 0.5) / a0;
+  a1 = (-2 * cosw0) / a0;
+  a2 = (1 - alpha) / a0;
+);
+
+// High-Shelf Filter for Build-Up Air
+function calc_hishelf(freq, gain_db) instance(b0, b1, b2, a1, a2) local(A, w0, cosw0, sinw0, alpha, a0, sqrtA_alpha) (
+  A = pow(10, gain_db / 40);
+  w0 = 2 * pi * freq / srate;
+  cosw0 = cos(w0);
+  sinw0 = sin(w0);
+  alpha = sinw0 * 0.5 * sqrt(2);
+  sqrtA_alpha = 2 * sqrt(A) * alpha;
+  
+  a0 = (A + 1) - (A - 1) * cosw0 + sqrtA_alpha;
+  b0 = (A * ((A + 1) + (A - 1) * cosw0 + sqrtA_alpha)) / a0;
+  b1 = (-2 * A * ((A - 1) + (A + 1) * cosw0)) / a0;
+  b2 = (A * ((A + 1) + (A - 1) * cosw0 - sqrtA_alpha)) / a0;
+  a1 = (2 * ((A - 1) - (A + 1) * cosw0)) / a0;
+  a2 = ((A + 1) - (A - 1) * cosw0 - sqrtA_alpha) / a0;
+);
+
+function process_biquad(in, b0, b1, b2, a1, a2) instance(z1, z2) local(out) (
+  out = in * b0 + z1;
+  z1 = in * b1 - out * a1 + z2;
+  z2 = in * b2 - out * a2;
+  out;
+);
+
+function update_static_filters() (
+  // Crossover for Sub-Mono Maker and High-Band Widener
+  sub_xover = slider6;
+  lp_sub.calc_lp(sub_xover);
+  hp_sub.calc_hp(sub_xover, 0.7071);
+  
+  // High-Pass filter for the synthetic Haas Side generator (280 Hz+)
+  hp_haas.calc_hp(280, 0.7071);
+  haas_samples = floor(0.0085 * srate); // 8.5ms decorrelation delay
+);
+
+update_static_filters();
+
+@slider
+update_static_filters();
+
+@sample
+inL = spl0;
+inR = spl1;
+
+// One-pole parameter smoothing on the Macro knob to prevent zipper noise during fast drops
+target_macro = slider1 * 0.01;
+smooth_macro = smooth_macro * 0.995 + target_macro * 0.005;
+
+// Check if we are in pure 0% Drop state
+(smooth_macro < 0.0005 && slider7 == 0) ? (
+  // Mode 0 at 0% Tension: 100% Bit-Transparent Bypass
+  spl0 = inL;
+  spl1 = inR;
+) : (
+  // 1. SUB-MONO MAKER (Keeps lows below Slider 6 dead-center on the goniometer)
+  lowL = sub_lpL.process_biquad(inL, lp_sub.b0, lp_sub.b1, lp_sub.b2, lp_sub.a1, lp_sub.a2);
+  lowR = sub_lpR.process_biquad(inR, lp_sub.b0, lp_sub.b1, lp_sub.b2, lp_sub.a1, lp_sub.a2);
+  
+  hiL = sub_hpL.process_biquad(inL, hp_sub.b0, hp_sub.b1, hp_sub.b2, hp_sub.a1, hp_sub.a2);
+  hiR = sub_hpR.process_biquad(inR, hp_sub.b0, hp_sub.b1, hp_sub.b2, hp_sub.a1, hp_sub.a2);
+  
+  // Sum the sub band to pure mono
+  low_mono = (lowL + lowR) * 0.5;
+  
+  smooth_macro < 0.0005 ? (
+    // At 0% with Sub-Mono enabled: output tight mono sub + untouched stereo highs
+    spl0 = low_mono + hiL;
+    spl1 = low_mono + hiR;
+  ) : (
+    // 2. ACTIVE TENSION BUILD-UP PROCESSING
+    // Exponential frequency curve from 20 Hz to Slider 2
+    cur_hpf = 20 * pow(slider2 / 20, smooth_macro);
+    // Add subtle resonant bump (Q rises from 0.707 to 0.95) for classic filter sweep punch
+    cur_q = 0.7071 + (smooth_macro * 0.25);
+    dyn_hpf.calc_hp(cur_hpf, cur_q);
+    
+    // Combine mono-sub and stereo-highs, then run through the sweeping Build-Up HPF
+    sigL = dyn_hpL.process_biquad(low_mono + hiL, dyn_hpf.b0, dyn_hpf.b1, dyn_hpf.b2, dyn_hpf.a1, dyn_hpf.a2);
+    sigR = dyn_hpR.process_biquad(low_mono + hiR, dyn_hpf.b0, dyn_hpf.b1, dyn_hpf.b2, dyn_hpf.a1, dyn_hpf.a2);
+    
+    // 3. MONO-COMPATIBLE HAAS SIDE GENERATOR + M/S WIDENING (Above 280 Hz)
+    haas_in = (sigL + sigR) * 0.5;
+    haas_filtered = haas_flt.process_biquad(haas_in, hp_haas.b0, hp_haas.b1, hp_haas.b2, hp_haas.a1, hp_haas.a2);
+    
+    delay_buf_L[write_pos] = haas_filtered;
+    read_pos = (write_pos - haas_samples + buf_size) & (buf_size - 1);
+    delayed_haas = delay_buf_L[read_pos];
+    write_pos = (write_pos + 1) & (buf_size - 1);
+    
+    // Encode Mid/Side of the high band
+    mid_hi = (hiL + hiR) * 0.5;
+    side_hi = (hiL - hiR) * 0.5;
+    
+    // Boost natural Side channel + inject synthetic Haas Side energy proportional to Macro
+    width_factor = 1.0 + smooth_macro * ((slider3 * 0.01) - 1.0);
+    synth_side = delayed_haas * (smooth_macro * 0.35);
+    new_side = (side_hi * width_factor) + synth_side;
+    
+    // Reconstruct widened stereo field and apply dynamic HPF to highs
+    wideL = sigL + (new_side - side_hi);
+    wideR = sigR - (new_side - side_hi);
+    
+    // 4. AIR EXCITER SHELF & DROP IMPACT GAIN TRIM
+    cur_air = smooth_macro * slider4;
+    air_flt.calc_hishelf(6000, cur_air);
+    
+    outL = airL.process_biquad(wideL, air_flt.b0, air_flt.b1, air_flt.b2, air_flt.a1, air_flt.a2);
+    outR = airR.process_biquad(wideR, air_flt.b0, air_flt.b1, air_flt.b2, air_flt.a1, air_flt.a2);
+    
+    cur_trim_db = smooth_macro * slider5;
+    trim_gain = pow(10, cur_trim_db / 20);
+    
+    spl0 = outL * trim_gain;
+    spl1 = outR * trim_gain;
+  );
+);
+
+@gfx 450 110
+gfx_clear = 0x10141D;
+gfx_setfont(1, "Arial", 15, 'b');
+
+// Draw Tension Meter Bar
+bar_x = 20;
+bar_y = 25;
+bar_w = gfx_w - 40;
+bar_h = 38;
+
+// Background trough
+gfx_set(0.18, 0.22, 0.30, 1);
+gfx_rect(bar_x, bar_y, bar_w, bar_h, 1);
+
+// Active tension fill (transitions from Navy Blue to Electric Cyan/Red at high tension)
+fill_w = bar_w * smooth_macro;
+r_col = 0.15 + smooth_macro * 0.80;
+g_col = 0.45 + (1 - abs(smooth_macro - 0.5)*2) * 0.35;
+b_col = 0.85 - smooth_macro * 0.50;
+gfx_set(r_col, g_col, b_col, 0.95);
+gfx_rect(bar_x, bar_y, fill_w, bar_h, 1);
+
+// Label readout
+gfx_set(1, 1, 1, 1);
+cur_freq_disp = floor(20 * pow(slider2 / 20, smooth_macro));
+sprintf(#status_str, "TENSION: %.1f%%   |   HPF: %d Hz   |   WIDTH: %d%%", smooth_macro * 100, cur_freq_disp, floor(100 + smooth_macro * (slider3 - 100)));
+gfx_measurestr(#status_str, tw, th);
+gfx_x = (gfx_w - tw) * 0.5;
+gfx_y = bar_y + (bar_h - th) * 0.5;
+gfx_drawstr(#status_str);
+
+// Interactive Mouse Drag on the Tension Bar + Right-Click Instant Drop Reset
+(mouse_cap & 1) ? (
+  mouse_x >= bar_x && mouse_x <= (bar_x + bar_w) && mouse_y >= bar_y && mouse_y <= (bar_y + bar_h) ? (
+    slider1 = min(max(((mouse_x - bar_x) / bar_w) * 100, 0), 100);
+    slider_automate(slider1);
+  );
+);
+
+// Right-click anywhere on the bar to snap straight to 0% (DROP!)
+(mouse_cap & 2) ? (
+  slider1 = 0;
+  slider_automate(slider1);
+);
+
+gfx_set(0.6, 0.65, 0.75, 1);
+gfx_setfont(1, "Arial", 12, 0);
+#hint = "Left-Drag Bar: Sweep Tension   |   Right-Click: Instant Drop Reset (0%)";
+gfx_measurestr(#hint, hw, hh);
+gfx_x = (gfx_w - hw) * 0.5;
+gfx_y = bar_y + bar_h + 15;
+gfx_drawstr(#hint);
