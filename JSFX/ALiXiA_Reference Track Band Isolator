@@ -1,0 +1,198 @@
+/**
+ * JSFX Name: ALiXiA_Reference Track Band Isolator 
+ * About: Allows Isolation / Soloing of Sub, Mids, Tops 
+ * Author: ALiXiA and REA
+ * Author URI: https://a4pz.com
+ * Donation: https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+ * Licence: M.I.T License
+ * REAPER: 7.0
+ * Version: 1.0
+ */
+
+/**
+ * Changelog:
+ * v1.0 (2026-10-12)
+  + Initial Release
+ */
+
+slider1:0<0,3,1{Full Range (Bypass),Solo SUB (Low),Solo MIDS (Mid),Solo TOPS (High)}>Band Audition Mode
+slider2:120<40,300,1>Sub / Mid Crossover (Hz)
+slider3:4000<1000,10000,10>Mid / Top Crossover (Hz)
+slider4:0<0,3,1{Stereo (Normal),Mono Sum (L+R),Mid Channel Only,Side Channel Only}>Spatial Audition Mode
+slider5:0<-18,6,0.1>Output Trim (dB)
+
+@init
+pi = $pi;
+
+// Function to calculate 2nd-order Butterworth Low-Pass biquad coefficients
+function calc_lp(freq) instance(b0, b1, b2, a1, a2) local(w0, cosw0, sinw0, alpha, a0) (
+  w0 = 2 * pi * freq / srate;
+  cosw0 = cos(w0);
+  sinw0 = sin(w0);
+  alpha = sinw0 / sqrt(2); // Q = 0.7071 (Butterworth)
+  
+  a0 = 1 + alpha;
+  b0 = ((1 - cosw0) / 2) / a0;
+  b1 = (1 - cosw0) / a0;
+  b2 = ((1 - cosw0) / 2) / a0;
+  a1 = (-2 * cosw0) / a0;
+  a2 = (1 - alpha) / a0;
+);
+
+// Function to calculate 2nd-order Butterworth High-Pass biquad coefficients
+function calc_hp(freq) instance(b0, b1, b2, a1, a2) local(w0, cosw0, sinw0, alpha, a0) (
+  w0 = 2 * pi * freq / srate;
+  cosw0 = cos(w0);
+  sinw0 = sin(w0);
+  alpha = sinw0 / sqrt(2); // Q = 0.7071 (Butterworth)
+  
+  a0 = 1 + alpha;
+  b0 = ((1 + cosw0) / 2) / a0;
+  b1 = -(1 + cosw0) / a0;
+  b2 = ((1 + cosw0) / 2) / a0;
+  a1 = (-2 * cosw0) / a0;
+  a2 = (1 - alpha) / a0;
+);
+
+// Direct Form II Transposed Biquad Filter execution
+function process_biquad(in, b0, b1, b2, a1, a2) instance(z1, z2) local(out) (
+  out = in * b0 + z1;
+  z1 = in * b1 - out * a1 + z2;
+  z2 = in * b2 - out * a2;
+  out;
+);
+
+function update_filters() (
+  low_xover = slider2;
+  high_xover = max(slider3, low_xover + 100); // Prevent crossover overlap
+  
+  // Calculate coefficients for LR4 (two cascaded 2nd-order Butterworth filters)
+  lp_low.calc_lp(low_xover);
+  hp_low.calc_hp(low_xover);
+  lp_high.calc_lp(high_xover);
+  hp_high.calc_hp(high_xover);
+  
+  // Fixed EEL2 exponentiation using pow() instead of bitwise ^
+  trim_gain = pow(10, slider5 / 20);
+);
+
+update_filters();
+
+@slider
+update_filters();
+
+@sample
+inL = spl0;
+inR = spl1;
+
+mode = slider1;
+
+// Only run the crossover math if we are actively soloing a band
+mode > 0 ? (
+  // --- SUB BAND (LR4 Low-Pass at Slider 2) ---
+  mode == 1 ? (
+    subL = subL_1.process_biquad(inL, lp_low.b0, lp_low.b1, lp_low.b2, lp_low.a1, lp_low.a2);
+    subL = subL_2.process_biquad(subL, lp_low.b0, lp_low.b1, lp_low.b2, lp_low.a1, lp_low.a2);
+    
+    subR = subR_1.process_biquad(inR, lp_low.b0, lp_low.b1, lp_low.b2, lp_low.a1, lp_low.a2);
+    subR = subR_2.process_biquad(subR, lp_low.b0, lp_low.b1, lp_low.b2, lp_low.a1, lp_low.a2);
+    
+    outL = subL;
+    outR = subR;
+  ) : 
+  
+  // --- MID BAND (LR4 High-Pass at Slider 2 + LR4 Low-Pass at Slider 3) ---
+  mode == 2 ? (
+    midL = midL_hp1.process_biquad(inL, hp_low.b0, hp_low.b1, hp_low.b2, hp_low.a1, hp_low.a2);
+    midL = midL_hp2.process_biquad(midL, hp_low.b0, hp_low.b1, hp_low.b2, hp_low.a1, hp_low.a2);
+    midL = midL_lp1.process_biquad(midL, lp_high.b0, lp_high.b1, lp_high.b2, lp_high.a1, lp_high.a2);
+    midL = midL_lp2.process_biquad(midL, lp_high.b0, lp_high.b1, lp_high.b2, lp_high.a1, lp_high.a2);
+    
+    midR = midR_hp1.process_biquad(inR, hp_low.b0, hp_low.b1, hp_low.b2, hp_low.a1, hp_low.a2);
+    midR = midR_hp2.process_biquad(midR, hp_low.b0, hp_low.b1, hp_low.b2, hp_low.a1, hp_low.a2);
+    midR = midR_lp1.process_biquad(midR, lp_high.b0, lp_high.b1, lp_high.b2, lp_high.a1, lp_high.a2);
+    midR = midR_lp2.process_biquad(midR, lp_high.b0, lp_high.b1, lp_high.b2, lp_high.a1, lp_high.a2);
+    
+    outL = midL;
+    outR = midR;
+  ) : 
+  
+  // --- TOPS BAND (LR4 High-Pass at Slider 3) ---
+  mode == 3 ? (
+    topL = topL_1.process_biquad(inL, hp_high.b0, hp_high.b1, hp_high.b2, hp_high.a1, hp_high.a2);
+    topL = topL_2.process_biquad(topL, hp_high.b0, hp_high.b1, hp_high.b2, hp_high.a1, hp_high.a2);
+    
+    topR = topR_1.process_biquad(inR, hp_high.b0, hp_high.b1, hp_high.b2, hp_high.a1, hp_high.a2);
+    topR = topR_2.process_biquad(topR, hp_high.b0, hp_high.b1, hp_high.b2, hp_high.a1, hp_high.a2);
+    
+    outL = topL;
+    outR = topR;
+  );
+) : (
+  // Mode 0: True Full-Range Bypass
+  outL = inL;
+  outR = inR;
+);
+
+// --- SPATIAL AUDITIONING (Stereo / Mono / Mid / Side) ---
+spatial = slider4;
+spatial == 1 ? ( // Mono Sum
+  mono = (outL + outR) * 0.5;
+  outL = mono;
+  outR = mono;
+) : spatial == 2 ? ( // Mid Only
+  mid = (outL + outR) * 0.5;
+  outL = mid;
+  outR = mid;
+) : spatial == 3 ? ( // Side Only (Monitored in dual-mono so it's easy to hear)
+  side = (outL - outR) * 0.5;
+  outL = side;
+  outR = side;
+);
+
+// Apply Final Output Trim
+spl0 = outL * trim_gain;
+spl1 = outR * trim_gain;
+
+@gfx 420 90
+gfx_clear = 0x12161F; // Deep navy-slate background
+gfx_setfont(1, "Arial", 16, 'b');
+
+// Draw 4 clickable mode boxes
+box_w = (gfx_w - 50) / 4;
+box_h = 50;
+y_pos = 20;
+
+// Helper function for drawing clickable band buttons
+function draw_btn(idx, x, label, r, g, b) (
+  slider1 == idx ? (
+    gfx_set(r, g, b, 0.95);
+    gfx_rect(x, y_pos, box_w, box_h, 1);
+    gfx_set(1, 1, 1, 1);
+  ) : (
+    gfx_set(r * 0.3, g * 0.3, b * 0.3, 0.8);
+    gfx_rect(x, y_pos, box_w, box_h, 1);
+    gfx_set(0.7, 0.7, 0.7, 1);
+  );
+  
+  gfx_measurestr(label, str_w, str_h);
+  gfx_x = x + (box_w - str_w) * 0.5;
+  gfx_y = y_pos + (box_h - str_h) * 0.5;
+  gfx_drawstr(label);
+  
+  // Mouse Click Detection
+  (mouse_cap & 1) && !(last_mouse_cap & 1) ? (
+    mouse_x >= x && mouse_x <= (x + box_w) && mouse_y >= y_pos && mouse_y <= (y_pos + box_h) ? (
+      slider1 = idx;
+      slider_automate(slider1);
+      update_filters();
+    );
+  );
+);
+
+draw_btn(0, 10, "FULL BYPASS", 0.25, 0.45, 0.75);
+draw_btn(1, 20 + box_w, "SOLO SUB", 0.85, 0.25, 0.35);
+draw_btn(2, 30 + box_w*2, "SOLO MIDS", 0.25, 0.75, 0.45);
+draw_btn(3, 40 + box_w*3, "SOLO TOPS", 0.85, 0.65, 0.20);
+
+last_mouse_cap = mouse_cap;
