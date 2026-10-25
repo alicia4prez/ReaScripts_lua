@@ -25,6 +25,7 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 #### Included JSFX
 - Jsfx\Alixia_VoiceofGod.jsfx
 - Jsfx\Mau_P Effect.jsfx
+- Jsfx\ALiXiA_Reference Track Band Isolator.jsfx 
 
 ##### A Few Words From The Human Behind The Code
 
