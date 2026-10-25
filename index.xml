@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="d9bec45d5f785b4b992dfab5d9086d8f993b92e2">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="ab8068111f286d878b9df22bb023831cf13c0293">
   <category name="JSFX">
+    <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Inspired By Mau P Drugs From Amsterdam\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0" author="ALiXiA and REA" time="2026-10-25T12:29:43Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/ab8068111f286d878b9df22bb023831cf13c0293/JSFX/ALiXiA_MauP_Tension_Transition.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="ALiXiA_Reference Track Band Isolator.jsfx" type="effect" desc="ALiXiA_Reference Track Band Isolator">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -32,7 +48,9 @@
         <source>https://github.com/alicia4prez/ReaScripts_lua/raw/d9953159393137921dbd565945c194756da87a30/JSFX/Alixia_VoiceofGod.jsfx</source>
       </version>
     </reapack>
-    <reapack name="Mau_P Effect.jsfx" type="effect" desc="Mau_P Effect (Generate A Massive Drop)">
+  </category>
+  <category name="JSFX/ALiXiA">
+    <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -43,9 +61,9 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-      <version name="1.0" author="ALiXiA and REA" time="2026-10-24T05:32:55Z">
+      <version name="1.0" author="ALiXiA and REA" time="2026-10-25T12:27:30Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/7fd23ffc05a4c9d8bf901a9953e41e2c1c031b89/JSFX/Mau_P%20Effect.jsfx</source>
+        <source>https://github.com/alicia4prez/ReaScripts_lua/raw/c8b3d8bbc22e01733097dc375fc02b5b0fa97866/JSFX/ALiXiA/ALiXiA_MauP_Tension_Transition.jsfx</source>
       </version>
     </reapack>
   </category>
@@ -164,7 +182,7 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Mau P Companion\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\Alixia_VoiceofGod.jsfx\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\Mau_P Effect.jsfx\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\ALiXiA_MauP_Tension_Transition.jsfx\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\ALiXiA_Reference Track Band Isolator.jsfx\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\ALiXiA_AKG361 Calibration.jsfx\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel4 \b \fs20 A Few Words From The Human Behind The Code\par}
