@@ -1,6 +1,9 @@
--- @description Lock Track Hierarchy and Order
+-- @description Locks Folder childs so they dont get jostled around elsewhere
 -- @author ALiXiA
--- @version 1.0
+-- @version 1.0.0
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @about
+--    Locks Folder childs so they dont get jostled around elsewhere
 
 local _, _, sectionID, cmdID = reaper.get_action_context()
 local ext_section = "Rea_TrackHierarchyLock"
