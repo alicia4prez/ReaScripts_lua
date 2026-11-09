@@ -1,6 +1,7 @@
 -- @description ALiXiA_Mix Prep and Session Sanitizer
 -- @version 4.2
 -- @author ALiXiA Gregory
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @changelog
 --   + Preserve Bass folders and all nested child tracks from deletion
 --   + Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
