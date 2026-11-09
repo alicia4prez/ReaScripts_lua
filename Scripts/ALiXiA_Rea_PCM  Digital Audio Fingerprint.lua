@@ -1,6 +1,7 @@
 -- @description Digital Audio PCM Fingerprint (SHA-256 / MD5)
 -- @version 1.2.0
 -- @author Rea & ALiXiA
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
 --   Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio,
 --   writes the hash to item notes, and drops a take marker at position 0:00.
