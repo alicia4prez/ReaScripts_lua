@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="145a7506b28458ac70c1c8f120a79e1402ee874b">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="f72cc98d0c7b2c8990cfe7eb58bea84730acb89c">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -185,8 +185,21 @@
       </version>
     </reapack>
     <reapack name="ALiXIA_UnLockTracks.lua" type="script" desc="Unlock Track Hierarchy and Order">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Companion to Track Lock script. This one unloacks the folders.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
       <version name="1.0" author="ALiXiA" time="2026-11-09T17:39:59Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f613f3ba71a316347b5c7a979e661c54a3b24293/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+      <version name="1.0.0" author="ALiXiA" time="2026-11-09T17:57:27Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f72cc98d0c7b2c8990cfe7eb58bea84730acb89c/Scripts/ALiXIA_UnLockTracks.lua</source>
       </version>
     </reapack>
   </category>
