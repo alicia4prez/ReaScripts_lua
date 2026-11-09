@@ -2,8 +2,10 @@
 -- @author ALiXiA Gregory
 -- @version 2.7
 -- @aboutTime tracker and session note. Metadata
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @changelog
---  - Initial release
+--   Initial release
+
 
 local r = reaper
 
