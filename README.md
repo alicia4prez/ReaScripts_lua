@@ -4,7 +4,8 @@ These are scripts that I have either personally written to make my own workflow 
 
 Most of these scripts were born out of necessity, laziness, curiosity, or some combination of all three. The primary goal has been to simplify my mixing, mastering, and general REAPER workflow by automating the repetitive nonsense that computers are supposed to be doing for us anyway.
 
-The collection covers a fairly ridiculous variety of tasks, including time tracking, repetitive workflow automation, audio-file processing, mixing preparation, file-integrity verification, and other assorted tools designed to save time over the long run.
+The collection covers a fairly ridiculous variety of tasks, including time tracking, repetitive workflow automation, audio-file processing, mixing preparation, file-integrity verification, and other assorted tools designed to save time over the long run. Thanks.
+
 ## Installing from my github repository 
 
 Copy the following url and paste inside Extensions > ReaPack > Import a Repository:
