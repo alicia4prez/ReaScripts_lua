@@ -1,6 +1,9 @@
--- ReaScript Name: Bring All Project FX Online (Tracks, Master, Input, Monitoring, and Takes)
--- Author: ALiXiA
--- Version: 1.0
+-- @description Bring All Project FX Online (Tracks, Master, Input, Monitoring, and Takes)
+-- @author ALiXiA
+-- @version 1.0.0
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @about
+--  Brings all track Fx, take Fx, input Fx in project online.
 
 reaper.Undo_BeginBlock()
 reaper.PreventUIRefresh(1)
