@@ -6,6 +6,7 @@
 --   color-coding, and resetting faders.
 -- @changelog
 --   - Initial release
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 
 -- ============================================================================
 -- REAPER Digital Fingerprint Embedder (Lua)
