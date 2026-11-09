@@ -21,8 +21,8 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 -   Scripts\AliXiA_Mau P Companion
--   Scripts\LockTracks
--   Scrripts\UnLockTracks
+-   Scripts\ALiXiA_LockTracks
+-   Scrripts\ALiXiA_UnLockTracks
 
 #### Included JSFX
 - Jsfx\Alixia_VoiceofGod.jsfx
