@@ -22,7 +22,7 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
 -   Scripts\ALiXiA_Mau P Companion
 -   Scripts\ALiXiA_LockTracks
--   Scrripts\ALiXiA_UnLockTracks
+-   Scripts\ALiXiA_UnLockTracks
 
 #### Included JSFX
 - Jsfx\Alixia_VoiceofGod.jsfx
