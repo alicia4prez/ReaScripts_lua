@@ -16,7 +16,7 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 
 -   Scripts\ALiXiA_Rea_PCM  Digital Audio Fingerprint
 -   Scripts\ALiXiA_DIatonic major minor mode transposer2
--   Scripts\ALiXiA_Session setup and ingestion
+-   ALiXiA_Rea_SessionPrep
 -   Scripts\ALiXiA_Studio Manager Script
 -   Scripts\AliXiA_Real Stage Gaining Monitor For Mixing
 -   Scripts\ALiXiA_Mix Prep and Session Sanitizer
