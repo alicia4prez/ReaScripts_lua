@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="464951120812a50871d366a68a20c5aafd7aafdf">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="f613f3ba71a316347b5c7a979e661c54a3b24293">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -102,6 +102,20 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/464951120812a50871d366a68a20c5aafd7aafdf/Scripts/ALiXiA_LockTracks.lua</source>
       </version>
     </reapack>
+    <reapack name="ALiXiA_Mau P Companion.lua" type="script" desc="ALiXiA Insert Tension Macro Ramp (0% -&gt; 100% -&gt; 0% across Time Selection)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected track (or Master track if none selected), reveals the Tension Macro envelope, and draws a tight 0% -> 100% exponential build-up ramp with an instant 0% drop cliff across the current Time Selection.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Rea &amp; Alixia" time="2026-11-09T17:38:53Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f741a764664d3bc9afff4e93321bd13f313c6997/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
+      </version>
+    </reapack>
     <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
       <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
@@ -150,6 +164,11 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
       </version>
     </reapack>
+    <reapack name="ALiXIA_UnLockTracks.lua" type="script" desc="Unlock Track Hierarchy and Order">
+      <version name="1.0" author="ALiXiA" time="2026-11-09T17:39:59Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f613f3ba71a316347b5c7a979e661c54a3b24293/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+    </reapack>
   </category>
   <metadata>
     <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -170,7 +189,7 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Real Stage Gaining Monitor For Mixing\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mix Prep and Session Sanitizer\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Mau P Companion\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mau P Companion\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_LockTracks\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scrripts\\ALiXiA_UnLockTracks\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
