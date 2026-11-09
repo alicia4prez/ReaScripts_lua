@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="12707b7a1d969a7026f72184706af51cdd867838">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="464951120812a50871d366a68a20c5aafd7aafdf">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -97,6 +97,11 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/71a6fde2f0680c6eba1737a75a47b390a13a40f1/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
     </reapack>
+    <reapack name="ALiXiA_LockTracks.lua" type="script" desc="Lock Track Hierarchy and Order">
+      <version name="1.0" author="ALiXiA" time="2026-11-09T17:34:14Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/464951120812a50871d366a68a20c5aafd7aafdf/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+    </reapack>
     <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
       <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
@@ -165,7 +170,9 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Studio Manager Script\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Real Stage Gaining Monitor For Mixing\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_Mix Prep and Session Sanitizer\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Mau P Companion\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\AliXiA_Mau P Companion\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts\\ALiXiA_LockTracks\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scrripts\\ALiXiA_UnLockTracks\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 Included JSFX\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\Alixia_VoiceofGod.jsfx\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jsfx\\ALiXiA_MauP_Tension_Transition.jsfx\par}
