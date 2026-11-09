@@ -1,12 +1,11 @@
--- ==============================================================================
--- Script Name: ALiXiA_Session_Prep_and_Stem_Ingestion.lua
--- Version: 3.0.0
--- Author: Alixia & Rea (The Reaper Queen)
--- Description: Complete Master Session Setup & Automated Stem Ingestion Engine.
---              Features isolated Hardware Reference routing, Master Bus summing,
---              3-Band Bass Splitter + Kick Sidechain, keyword alias stem matching,
---              10ms fades, and -18 dBFS auto-gain staging on imported stems.
--- ==============================================================================
+-- @description Complete Master Session Setup & Automated Stem Ingestion Engine.
+-- @version 3.0.0
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @about
+--   Complete Master Session Setup & Automated Stem Ingestion Engine.
+--   Features isolated Hardware Reference routing, Master Bus summing,
+--   3-Band Bass Splitter + Kick Sidechain, keyword alias stem matching,
+--   10ms fades, and -18 dBFS auto-gain staging on imported stems.
 
 local TARGET_NORM_DB = -18.0
 local FADE_LEN_SEC   = 0.010 -- 10ms fades
