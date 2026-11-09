@@ -3,7 +3,7 @@
 -- @version 1.0.0
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
---  Companion to Track Lock script. This one unloacks the folders. 
+--   Companion to Track Lock script. This one unloacks the folders. 
 
 local ext_section = "Rea_TrackHierarchyLock"
 reaper.SetExtState(ext_section, "running", "0", false)
