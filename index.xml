@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="21beb41715307af88b4d662904c08ce0a7182291">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="6b89db5da9de2f79e2d23143c4915867980715a5">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -68,7 +68,7 @@
     </reapack>
   </category>
   <category name="Scripts">
-    <reapack name="ALiXiA_All FX Online.lua" type="script" desc="Bring All Project FX Online (Tracks, Master, Input, Monitoring, and Takes)">
+    <reapack name="ALiXiA_All FX Online.lua" type="script" desc="ALiXiA_ALL FX Online">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
