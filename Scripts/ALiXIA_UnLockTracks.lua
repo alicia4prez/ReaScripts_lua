@@ -1,8 +1,5 @@
 -- @description Unlock Track Hierarchy and Order
 -- @author ALiXiA
--- @version 1.0
--- @description Unlock Track Hierarchy and Order
--- @author ALiXiA
 -- @version 1.0.0
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
