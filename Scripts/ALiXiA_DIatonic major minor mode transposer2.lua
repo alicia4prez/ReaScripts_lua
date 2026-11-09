@@ -6,7 +6,8 @@
 --    into another key or mode
 -- @changelog
 --    intitial release under 4.0 to the community
--- Requires: ReaImGui extension
+-- Requires ReaImGui extension
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 
 function main()
     reaper.Undo_BeginBlock()
