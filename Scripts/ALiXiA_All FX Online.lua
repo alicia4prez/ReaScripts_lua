@@ -1,4 +1,4 @@
--- @description Bring All Project FX Online (Tracks, Master, Input, Monitoring, and Takes)
+-- @description ALiXiA_ALL FX Online
 -- @author ALiXiA
 -- @version 1.0.0
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
