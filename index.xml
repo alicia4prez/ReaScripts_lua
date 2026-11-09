@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA's Reaper lua Scripts" commit="193d8d89a643f628437cd0fd46b69e581e0c563d">
+<index version="1" name="ALiXiA's Reaper lua Scripts" commit="145a7506b28458ac70c1c8f120a79e1402ee874b">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -148,6 +148,21 @@
       </metadata>
       <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/9ecc749609b652bef37ef001f62d6846de032b2d/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Rea_SessionPrep.lua" type="script" desc="Complete Master Session Setup &amp; Automated Stem Ingestion Engine.">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Complete Master Session Setup & Automated Stem Ingestion Engine. Features isolated Hardware Reference routing, Master Bus summing, 3-Band Bass Splitter + Kick Sidechain, keyword alias stem matching, 10ms fades, and -18 dBFS auto-gain staging on imported stems.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="3.0.0" time="2026-11-09T17:55:04Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/145a7506b28458ac70c1c8f120a79e1402ee874b/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
       </version>
     </reapack>
     <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
