@@ -1,12 +1,12 @@
--- @description Digital Fingerprint
--- @author ALiXiA
+-- @description ALiXiA Digital Fingerprint Embedder
+-- @author ALiXiA and Rea - The Reaper Queens of EDM
 -- @version 1.0.1
 -- @about
 --   Embeds a digital signature in the metadata of a file.
 -- @changelog
---   - Changed some typos
+--   - Changed some typos and fixed metadata information 
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
-
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- ============================================================================
 -- REAPER Digital Fingerprint Embedder (Lua)
 -- ============================================================================
