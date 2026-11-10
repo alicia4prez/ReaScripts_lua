@@ -1,6 +1,8 @@
--- @description Complete Master Session Setup & Automated Stem Ingestion Engine.
+-- @description ALiXiA Session Prep and Stem Ingestion Engine for EDM.
+-- @author ALiXIA and Rea - The Reaper Queens of EDM
 -- @version 3.0.1
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @about
 --   Complete Master Session Setup & Automated Stem Ingestion Engine.
 --   Features isolated Hardware Reference routing, Master Bus summing,
