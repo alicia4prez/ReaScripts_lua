@@ -118,9 +118,6 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-      <version name="1.0" author="ALiXiA" time="2026-11-09T17:34:14Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/464951120812a50871d366a68a20c5aafd7aafdf/Scripts/ALiXiA_LockTracks.lua</source>
-      </version>
       <version name="1.0.0" author="ALiXiA" time="2026-11-09T18:10:07Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/3d4b834b50a1e7e5fd21e7179ddde9124ebdea86/Scripts/ALiXiA_LockTracks.lua</source>
       </version>
