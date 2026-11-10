@@ -1,10 +1,13 @@
 -- @description Digital Audio PCM Fingerprint (SHA-256 / MD5)
--- @version 1.2.1
--- @author Rea & ALiXiA
+-- @version 1.2.2
+-- @author Rea & ALiXiA - The Reaper Queens of EDM
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @about
 --   Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio,
 --   writes the hash to item notes, and drops a take marker at position 0:00.
+-- @changelog
+--   + Standarized metadata
 
 -- 1. Validate selection
 local item = reaper.GetSelectedMediaItem(0, 0)
