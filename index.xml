@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="c71bb101897443817076834a15f7b726cffd5b26">
+<index version="1" name="ALiXiA ReaScripts" commit="b4ef7b0164c467a7e8aa493135c09a0a4bcb8ffb">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -106,7 +106,7 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c71bb101897443817076834a15f7b726cffd5b26/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_LockTracks.lua" type="script" desc="Locks Folder childs so they dont get jostled around elsewhere">
+    <reapack name="ALiXiA_LockTracks.lua" type="script" desc="ALiXiA Folder Track Lock (Locks child tracks in folders)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -115,6 +115,7 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Keeps folders locked so childs are not moved around.\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
       <version name="1.0.0" author="ALiXiA" time="2026-11-09T17:34:14Z">
@@ -125,6 +126,10 @@
       </version>
       <version name="2.0.1" author="ALiXiA" time="2026-11-10T05:06:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/4cc05944d572bd845816e632f88ecc69ca0ed0f8/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+      <version name="2.0.2" author="ALiXiA" time="2026-11-10T18:36:10Z">
+        <changelog><![CDATA[+ Fixed Metadata in file]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b4ef7b0164c467a7e8aa493135c09a0a4bcb8ffb/Scripts/ALiXiA_LockTracks.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Mau P Companion.lua" type="script" desc="ALiXiA Insert Tension Macro Ramp (0% -&gt; 100% -&gt; 0% across Time Selection)">
