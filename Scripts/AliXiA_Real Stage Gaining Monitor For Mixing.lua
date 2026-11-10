@@ -1,10 +1,11 @@
---@description Gain Staging Utility
---@author ALiXiA Gregory
---@version 2.0.1
---@donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
---@about
--- Reaper gain Staging Analyzer FIxed
--- monitor audio in real time 
+-- @description ALiXiA Gain Staging Utility
+-- @author ALiXiA and Rea - The Reaper Queens of EDM
+-- @version 2.0.2
+-- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
+-- @about
+-- Reaper gain Staging Analyzer 
+-- @changelog Fixed monitor audio in real time and metadata
 --[[
 ===========================================================
         REAPER GAIN STAGING ANALYZER
