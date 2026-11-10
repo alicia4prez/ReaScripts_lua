@@ -1,6 +1,6 @@
 -- @description Unlock Track Hierarchy and Order
 -- @author ALiXiA
--- @version 1.0.0
+-- @version 1.0.1
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
 --   Companion to Track Lock script. This one unloacks the folders. 
