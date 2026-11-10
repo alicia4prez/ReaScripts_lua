@@ -24,6 +24,8 @@ Copy the following url and paste inside Extensions > ReaPack > Import a Reposito
 -   Scripts\ALiXiA_Mau P Companion
 -   Scripts\ALiXiA_LockTracks
 -   Scripts\ALiXiA_UnLockTracks
+-   Scripts\ALiXiA_Digital Fingerprint
+-   Scripts\ALiXiA_Rea_PCM Digital Audio Fingerprint
 
 #### Included JSFX
 - Jsfx\Alixia_VoiceofGod.jsfx
