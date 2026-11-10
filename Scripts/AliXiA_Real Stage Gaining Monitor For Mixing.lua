@@ -1,6 +1,6 @@
 --@description Gain Staging Utility
 --@author ALiXiA Gregory
---@version 2.0
+--@version 2.0.1
 --@donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 --@about
 -- Reaper gain Staging Analyzer FIxed
