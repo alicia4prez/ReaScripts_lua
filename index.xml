@@ -161,11 +161,6 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/53ccaefaf1be8e1157f82e16638094811d533a40/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
       </version>
       <version name="4.2" author="ALiXiA Gregory" time="2026-10-18T06:22:48Z">
-        <changelog><![CDATA[+ Preserve Bass folders and all nested child tracks from deletion
-+ Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
-+ Preserve folder closure depth (I_FOLDERDEPTH) when deleting empty tracks inside other folders]]></changelog>
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/0971ec2554b80f2872194fe2b5ad9fa68480f8d2/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
-      </version>
       <version name="4.2.0" author="ALiXiA Gregory" time="2026-11-10T04:06:06Z">
         <changelog><![CDATA[+ Preserve Bass folders and all nested child tracks from deletion
 + Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
@@ -249,13 +244,6 @@
 }
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
-      </metadata>
-      <version name="1.0" author="ALiXiA" time="2026-11-09T17:39:59Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f613f3ba71a316347b5c7a979e661c54a3b24293/Scripts/ALiXIA_UnLockTracks.lua</source>
-      </version>
-      <version name="1.0.0" author="ALiXiA" time="2026-11-09T17:57:27Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f72cc98d0c7b2c8990cfe7eb58bea84730acb89c/Scripts/ALiXIA_UnLockTracks.lua</source>
-      </version>
       <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:04:30Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c34a36fdba73ce1e990bab6603ad754ab8e5c5f1/Scripts/ALiXIA_UnLockTracks.lua</source>
       </version>
