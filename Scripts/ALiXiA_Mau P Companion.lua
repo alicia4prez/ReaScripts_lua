@@ -1,13 +1,15 @@
 -- @description ALiXiA Insert Tension Macro Ramp (0% -> 100% -> 0% across Time Selection)
 -- @author Rea & Alixia
--- @version 1.0.1
+-- @version 1.0.2
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @about
 --    Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected
 --    track (or Master track if none selected), reveals the Tension Macro envelope,
 --    and draws a tight 0% -> 100% exponential build-up ramp with an instant 0% drop cliff
 --    across the current Time Selection.
-
+-- @changelog
+--   + Standarized metadata for all scripts
 
 local r = reaper
 
