@@ -5,7 +5,7 @@
 --   Prepares a session for mixing by organizing tracks, 
 --   color-coding, and resetting faders.
 -- @changelog
---   - Initial release
+--   - Changed some typos
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 
 -- ============================================================================
