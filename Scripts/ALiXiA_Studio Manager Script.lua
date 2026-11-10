@@ -1,6 +1,6 @@
--- @description REA Studio Manager (Project, Track, & Time Tracker) v2.7 FIXED
+-- @description REA Studio Manager (Project, Track, & Time Tracker)
 -- @author ALiXiA Gregory
--- @version 2.7.2
+-- @version 2.7.3
 -- @aboutTime tracker and session note. Metadata
 -- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
