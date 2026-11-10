@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" commit="7b904e8e19e4ec848e62fae8b4ce593f88ac4999">
+<index version="1" commit="4cc05944d572bd845816e632f88ecc69ca0ed0f8">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -94,7 +94,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Prepares a session for mixing by organizing tracks, color-coding, and resetting faders.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Embeds a digital signature in the metadata of a file.\par}
 }
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
@@ -113,7 +113,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Locks Folder childs so they dont get jostled around elsewhere\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Keeps folders locked so childs are not moved around.\par}
 }
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
@@ -126,6 +126,9 @@
       </version>
       <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:05:30Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/dabffc73d8b7d91c71593817385dcfb60196300e/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+      <version name="2.0.1" author="ALiXiA" time="2026-11-10T05:06:08Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/4cc05944d572bd845816e632f88ecc69ca0ed0f8/Scripts/ALiXiA_LockTracks.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Mau P Companion.lua" type="script" desc="ALiXiA Insert Tension Macro Ramp (0% -&gt; 100% -&gt; 0% across Time Selection)">
