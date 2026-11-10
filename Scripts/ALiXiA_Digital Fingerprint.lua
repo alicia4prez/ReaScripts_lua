@@ -2,8 +2,7 @@
 -- @author ALiXiA
 -- @version 1.0.1
 -- @about
---   Prepares a session for mixing by organizing tracks, 
---   color-coding, and resetting faders.
+--   Embeds a digital signature in the metadata of a file.
 -- @changelog
 --   - Changed some typos
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
