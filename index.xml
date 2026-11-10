@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="490f26ea9771c6c0bdae32ae526df62415ba877f">
+<index version="1" name="ALiXiA ReaScripts" commit="4b908e7a7ad679575258b5c5fa3c906eb1d3db46">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -189,7 +189,7 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/490f26ea9771c6c0bdae32ae526df62415ba877f/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_Rea_SessionPrep.lua" type="script" desc="Complete Master Session Setup &amp; Automated Stem Ingestion Engine.">
+    <reapack name="ALiXiA_Rea_SessionPrep.lua" type="script" desc="ALiXiA Session Prep and Stem Ingestion Engine for EDM.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -198,13 +198,14 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Complete Master Session Setup & Automated Stem Ingestion Engine. Features isolated Hardware Reference routing, Master Bus summing, 3-Band Bass Splitter + Kick Sidechain, keyword alias stem matching, 10ms fades, and -18 dBFS auto-gain staging on imported stems.\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
       <version name="3.0.0" time="2026-11-09T17:55:04Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/145a7506b28458ac70c1c8f120a79e1402ee874b/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
       </version>
-      <version name="3.0.1" time="2026-11-10T04:06:37Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/78fd4b8d4d9ac0b30ee7f3120c5b898649ac636e/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
+      <version name="3.0.1" time="2026-11-10T04:06:37Z" author="ALiXIA and Rea - The Reaper Queens of EDM">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/4b908e7a7ad679575258b5c5fa3c906eb1d3db46/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
       </version>
     </reapack>
     <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
