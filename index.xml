@@ -79,10 +79,10 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-  <version name="4.0.0" author="Rea and ALiXiA - The Reaper Queens" time="2026-09-21T23:25:00Z">
-    <changelog><![CDATA[intitial release under 4.0 to the community]]></changelog>
-    <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/851a14341459cdf7d6572a8ee114f239c838ba9d/Scripts/ALiXiA_DIatonic%20major%20minor%20mode%20transposer2.lua</source>
-  </version>
+      <version name="4.0" author="Rea and ALiXiA - The Reaper Queens" time="2026-09-28T00:49:42Z">
+        <changelog><![CDATA[intitial release under 4.0 to the community]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/851a14341459cdf7d6572a8ee114f239c838ba9d/Scripts/ALiXiA_DIatonic%20major%20minor%20mode%20transposer2.lua</source>
+      </version>
       <version name="4.0.1" author="Rea and ALiXiA - The Reaper Queens" time="2026-11-10T04:04:51Z">
         <changelog><![CDATA[intitial release under 4.0 to the community]]></changelog>
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/8a4fa600de0e44c6b792fd88c888d7242eb7572f/Scripts/ALiXiA_DIatonic%20major%20minor%20mode%20transposer2.lua</source>
@@ -99,6 +99,7 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
+      <version name="1.0" author="ALiXiA Gregory" time="2026-09-21T23:20:57Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/71a6fde2f0680c6eba1737a75a47b390a13a40f1/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
       <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:05:09Z">
@@ -108,8 +109,21 @@
     </reapack>
     <reapack name="ALiXiA_LockTracks.lua" type="script" desc="Locks Folder childs so they dont get jostled around elsewhere">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}\widowctrl\hyphauto{\pard \ql \f0 \sa180 \li0 \fi0 Keeps folders locked so childs are not moved around.\par}}]]>
-        </description>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Keeps folders locked so childs are not moved around.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0" author="ALiXiA" time="2026-11-09T17:34:14Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/464951120812a50871d366a68a20c5aafd7aafdf/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+      <version name="1.0.0" author="ALiXiA" time="2026-11-09T18:10:07Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/3d4b834b50a1e7e5fd21e7179ddde9124ebdea86/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
       <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:05:30Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/dabffc73d8b7d91c71593817385dcfb60196300e/Scripts/ALiXiA_LockTracks.lua</source>
       </version>
@@ -128,16 +142,9 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-       <version name="1.0.1" author="Rea &amp; Alixia" time="2026-11-10T04:05:46Z">
-      <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/51b15d3687b407b6061c6722a881c596491458c2/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
-    </version>
-  </reapack>
-  <reapack name="ALiXiA_Rea_PCM  Digital Audio Fingerprint.lua" type="script" desc="Digital Audio PCM Fingerprint (SHA-256 / MD5)">
-    <metadata>
-      <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}} {\colortbl;\red255\green0\blue0;\red0\green0\blue255;} \widowctrl\hyphauto {\pard \ql \f0 \sa180 \li0 \fi0 Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio, writes the hash to item notes, and drops a take marker at position 0:00.\par} } ]]></description>
-      <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
-    </metadata>
-    <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
+      <version name="1.0" author="Rea &amp; Alixia" time="2026-11-09T17:38:53Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f741a764664d3bc9afff4e93321bd13f313c6997/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
+      </version>
       <version name="1.0.1" author="Rea &amp; Alixia" time="2026-11-10T04:05:46Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/51b15d3687b407b6061c6722a881c596491458c2/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
       </version>
@@ -146,7 +153,154 @@
       <metadata>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
+      <version name="4.1" author="ALiXiA Gregory" time="2026-09-21T23:19:08Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+      <version name="1.0.0" author="ALiXia" time="2026-09-22T09:41:21Z">
+        <changelog><![CDATA[- Initial release]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/53ccaefaf1be8e1157f82e16638094811d533a40/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+      <version name="4.2" author="ALiXiA Gregory" time="2026-10-18T06:22:48Z">
+        <changelog><![CDATA[+ Preserve Bass folders and all nested child tracks from deletion
++ Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
++ Preserve folder closure depth (I_FOLDERDEPTH) when deleting empty tracks inside other folders]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/0971ec2554b80f2872194fe2b5ad9fa68480f8d2/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+      <version name="4.2.0" author="ALiXiA Gregory" time="2026-11-10T04:06:06Z">
+        <changelog><![CDATA[+ Preserve Bass folders and all nested child tracks from deletion
++ Maintain internal/external routing, sidechains, and B_MAINSEND states for Bass folders
++ Preserve folder closure depth (I_FOLDERDEPTH) when deleting empty tracks inside other folders]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/aca4eeddb851603ebc10039c6b4137b920a5a9cf/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Rea_PCM  Digital Audio Fingerprint.lua" type="script" desc="Digital Audio PCM Fingerprint (SHA-256 / MD5)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio, writes the hash to item notes, and drops a take marker at position 0:00.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/9ecc749609b652bef37ef001f62d6846de032b2d/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
+      </version>
+      <version name="1.2.1" author="Rea &amp; ALiXiA" time="2026-11-10T04:06:23Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/9a8497e44857879d4d45644e8880145fee3890bd/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Rea_SessionPrep.lua" type="script" desc="Complete Master Session Setup &amp; Automated Stem Ingestion Engine.">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Complete Master Session Setup & Automated Stem Ingestion Engine. Features isolated Hardware Reference routing, Master Bus summing, 3-Band Bass Splitter + Kick Sidechain, keyword alias stem matching, 10ms fades, and -18 dBFS auto-gain staging on imported stems.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="3.0.0" time="2026-11-09T17:55:04Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/145a7506b28458ac70c1c8f120a79e1402ee874b/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
+      </version>
+      <version name="3.0.1" time="2026-11-10T04:06:37Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/78fd4b8d4d9ac0b30ee7f3120c5b898649ac636e/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
+      </version>
+    </reapack>
+    <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Reaper gain Staging Analyzer FIxed monitor audio in real time\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="2.0" author="ALiXiA Gregory" time="2026-09-21T23:23:38Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+      </version>
+      <version name="2.0.1" author="ALiXiA Gregory" time="2026-11-10T04:07:06Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b3b7c61edebac7513471656790d762164e7caf7f/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
+      <metadata>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="2.7" author="REA the Reaper Queen" time="2026-09-21T23:06:49Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+      </version>
+      <version name="2.7.1" author="ALiXiA Gregory" time="2026-11-10T04:06:53Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/375b28c156b166c8dfe3c8bf53cafe571442ddf0/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXIA_UnLockTracks.lua" type="script" desc="Unlock Track Hierarchy and Order">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Companion to Track Lock script. This one unloacks the folders.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0" author="ALiXiA" time="2026-11-09T17:39:59Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f613f3ba71a316347b5c7a979e661c54a3b24293/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+      <version name="1.0.0" author="ALiXiA" time="2026-11-09T17:57:27Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f72cc98d0c7b2c8990cfe7eb58bea84730acb89c/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+      <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:04:30Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c34a36fdba73ce1e990bab6603ad754ab8e5c5f1/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <reapack name="ALiXiA_LockTracks.lua" type="script" desc="Locks Folder childs so they dont get jostled around elsewhere">
+    <metadata>
+      <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}\widowctrl\hyphauto{\pard \ql \f0 \sa180 \li0 \fi0 Keeps folders locked so childs are not moved around.\par}}]]></description>
+      <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:05:30Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/dabffc73d8b7d91c71593817385dcfb60196300e/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+      <version name="2.0.1" author="ALiXiA" time="2026-11-10T05:06:08Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/4cc05944d572bd845816e632f88ecc69ca0ed0f8/Scripts/ALiXiA_LockTracks.lua</source>
+      </version>
+    </metadata>
+    <reapack name="ALiXiA_Mau P Companion.lua" type="script" desc="ALiXiA Insert Tension Macro Ramp (0% -&gt; 100% -&gt; 0% across Time Selection)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected track (or Master track if none selected), reveals the Tension Macro envelope, and draws a tight 0% -> 100% exponential build-up ramp with an instant 0% drop cliff across the current Time Selection.\par}
+}
+]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <version name="1.0.1" author="Rea &amp; Alixia" time="2026-11-10T04:05:46Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/51b15d3687b407b6061c6722a881c596491458c2/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
+      </version>
+    </reapack>
+    <reapack name="ALiXiA_Rea_PCM  Digital Audio Fingerprint.lua" type="script" desc="Digital Audio PCM Fingerprint (SHA-256 / MD5)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}} {\colortbl;\red255\green0\blue0;\red0\green0\blue255;} \widowctrl\hyphauto {\pard \ql \f0 \sa180 \li0 \fi0 Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio, writes the hash to item notes, and drops a take marker at position 0:00.\par} } ]]></description>
+        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+      </metadata>
+      <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
+        <metadata>
+          <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+        </metadata>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/1682cc315b7712c519c6ce7aa398d9c4bf9f1f34/Scripts/ALiXiA_Mix%20Prep%20and%20Session%20Sanitizer.lua</source>
+      </reapack>
+      <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
+        <version name="1.0.1" author="Rea &amp; Alixia" time="2026-11-10T04:05:46Z">
+          <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/51b15d3687b407b6061c6722a881c596491458c2/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
+        </version>
       </version>
       <version name="1.0.0" author="ALiXia" time="2026-09-22T09:41:21Z">
         <changelog><![CDATA[- Initial release]]></changelog>
@@ -206,36 +360,20 @@
 ]]></description>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
-      </version>
-      <version name="2.0.1" author="ALiXiA Gregory" time="2026-11-10T04:07:06Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b3b7c61edebac7513471656790d762164e7caf7f/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
-      </version>
+      <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/a3297e5809e9498318d3e9b992299daacd21f1db/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
     </reapack>
-    <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
-      <metadata>
-        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
-      </metadata>
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
-      </version>
-      <version name="2.7.1" author="ALiXiA Gregory" time="2026-11-10T04:06:53Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/375b28c156b166c8dfe3c8bf53cafe571442ddf0/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
-      </version>
-    </reapack>
-    <reapack name="ALiXIA_UnLockTracks.lua" type="script" desc="Unlock Track Hierarchy and Order">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Companion to Track Lock script. This one unloacks the folders.\par}
-}
-]]></description>
-        <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
-      <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:04:30Z">
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c34a36fdba73ce1e990bab6603ad754ab8e5c5f1/Scripts/ALiXIA_UnLockTracks.lua</source>
-      </version>
-    </reapack>
-  </category>
+    <version name="2.0.1" author="ALiXiA Gregory" time="2026-11-10T04:07:06Z">
+      <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b3b7c61edebac7513471656790d762164e7caf7f/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+    </version>
+  </reapack>
+  <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
+    <metadata>
+      <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
+    </metadata>
+    <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/d5c210f6ed2eac8109f5bbdebc5ad408dbdefb45/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+  </reapack>
+  <version name="2.7.1" author="ALiXiA Gregory" time="2026-11-10T04:06:53Z">
+    <changelog><![CDATA[Initial release]]></changelog>
+    <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/375b28c156b166c8dfe3c8bf53cafe571442ddf0/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+  </version>
 </index>
