@@ -1,7 +1,8 @@
--- @description Unlock Track Hierarchy and Order
--- @author ALiXiA
--- @version 1.0.1
+-- @description ALiXiA Unlock Tracks (companion to ALiXiA Lock Tracks)
+-- @author ALiXiA & Rea - The Reaper Queens of EDM
+-- @version 1.0.2
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @about
 --   Companion to Track Lock script. This one unloacks the folders. 
 
