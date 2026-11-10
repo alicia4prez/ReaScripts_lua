@@ -1,9 +1,9 @@
 -- @description Locks Folder childs so they dont get jostled around elsewhere
 -- @author ALiXiA
--- @version 1.0.1
+-- @version 2.0.1
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
---    Locks Folder childs so they dont get jostled around elsewhere
+--   Keeps folders locked so childs are not moved around.
 
 local _, _, sectionID, cmdID = reaper.get_action_context()
 local ext_section = "Rea_TrackHierarchyLock"
