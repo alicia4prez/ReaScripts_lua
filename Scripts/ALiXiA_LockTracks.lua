@@ -1,9 +1,12 @@
--- @description Locks Folder childs so they dont get jostled around elsewhere
+-- @description ALiXiA Folder Track Lock (Locks child tracks in folders)
 -- @author ALiXiA
--- @version 2.0.1
+-- @version 2.0.2
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
 --   Keeps folders locked so childs are not moved around.
+-- @changelog 
+--   + Fixed Metadata in file
 
 local _, _, sectionID, cmdID = reaper.get_action_context()
 local ext_section = "Rea_TrackHierarchyLock"
