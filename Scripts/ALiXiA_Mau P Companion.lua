@@ -1,6 +1,6 @@
 -- @description ALiXiA Insert Tension Macro Ramp (0% -> 100% -> 0% across Time Selection)
 -- @author Rea & Alixia
--- @version 1.0
+-- @version 1.0.1
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
 --    Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected
