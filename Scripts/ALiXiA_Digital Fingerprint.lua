@@ -1,6 +1,6 @@
 -- @description Digital Fingerprint
 -- @author ALiXiA
--- @version 1.0
+-- @version 1.0.1
 -- @about
 --   Prepares a session for mixing by organizing tracks, 
 --   color-coding, and resetting faders.
