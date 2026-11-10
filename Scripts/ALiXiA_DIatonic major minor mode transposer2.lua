@@ -1,13 +1,14 @@
--- @description ALiXiA_DIatonic major minor mode transposer2
--- @author Rea and ALiXiA - The Reaper Queens
--- @version 4.0.1
+-- @description ALiXiA_DIatonic Major, Minor, and Mode Transposer 2
+-- @author Rea and ALiXiA - The Reaper Queens of EDM
+-- @version 4.0.2
 -- @about
 --    A simple tool that transposes any key or mode into another
 --    into another key or mode
 -- @changelog
---    intitial release under 4.0 to the community
+--    intitial release under 4.0.0 to the community
 -- Requires ReaImGui extension
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
+-- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 
 function main()
     reaper.Undo_BeginBlock()
