@@ -1,6 +1,6 @@
 -- @description ALiXiA_DIatonic major minor mode transposer2
 -- @author Rea and ALiXiA - The Reaper Queens
--- @version 4.0
+-- @version 4.0.1
 -- @about
 --    A simple tool that transposes any key or mode into another
 --    into another key or mode
