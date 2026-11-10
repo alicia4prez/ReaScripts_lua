@@ -1,5 +1,5 @@
 -- @description Complete Master Session Setup & Automated Stem Ingestion Engine.
--- @version 3.0.0
+-- @version 3.0.1
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
 --   Complete Master Session Setup & Automated Stem Ingestion Engine.
