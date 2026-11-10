@@ -1,5 +1,5 @@
 -- @description Digital Audio PCM Fingerprint (SHA-256 / MD5)
--- @version 1.2.0
+-- @version 1.2.1
 -- @author Rea & ALiXiA
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @about
