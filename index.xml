@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="2dff0a822cb3f4aae667db5114de0d2968971fba">
+<index version="1" name="ALiXiA ReaScripts" commit="cc0366651c19ec1dd44d498619fe2e1b6b9629a3">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -223,7 +223,7 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b3b7c61edebac7513471656790d762164e7caf7f/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker) v2.7 FIXED">
+    <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker)">
       <metadata>
         <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
@@ -235,6 +235,10 @@
       <version name="2.7.2" author="ALiXiA Gregory" time="2026-11-10T18:44:33Z">
         <changelog><![CDATA[Standarized Meta Data]]></changelog>
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/2dff0a822cb3f4aae667db5114de0d2968971fba/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
+      </version>
+      <version name="2.7.3" author="ALiXiA Gregory" time="2026-11-10T18:56:07Z">
+        <changelog><![CDATA[Standarized Meta Data]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/cc0366651c19ec1dd44d498619fe2e1b6b9629a3/Scripts/ALiXiA_Studio%20Manager%20Script.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXIA_UnLockTracks.lua" type="script" desc="ALiXiA Unlock Tracks (companion to ALiXiA Lock Tracks)">
