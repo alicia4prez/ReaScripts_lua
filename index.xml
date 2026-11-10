@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="73709fc10a1f91f77a81d057125f7caa2700d71a">
+<index version="1" name="ALiXiA ReaScripts" commit="490f26ea9771c6c0bdae32ae526df62415ba877f">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -175,6 +175,7 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Generates cryptographic SHA-256 and MD5 signatures from raw PCM audio, writes the hash to item notes, and drops a take marker at position 0:00.\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
       <version name="1.2.0" author="Rea &amp; ALiXiA" time="2026-09-28T06:16:48Z">
@@ -182,6 +183,10 @@
       </version>
       <version name="1.2.1" author="Rea &amp; ALiXiA" time="2026-11-10T04:06:23Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/9a8497e44857879d4d45644e8880145fee3890bd/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
+      </version>
+      <version name="1.2.2" author="Rea &amp; ALiXiA - The Reaper Queens of EDM" time="2026-11-10T18:40:14Z">
+        <changelog><![CDATA[+ Standarized metadata]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/490f26ea9771c6c0bdae32ae526df62415ba877f/Scripts/ALiXiA_Rea_PCM%20%20Digital%20Audio%20Fingerprint.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Rea_SessionPrep.lua" type="script" desc="Complete Master Session Setup &amp; Automated Stem Ingestion Engine.">
