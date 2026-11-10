@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" commit="c277107958fb25fca57c2c93a0e0561fedae2913">
+<index version="1" commit="c34a36fdba73ce1e990bab6603ad754ab8e5c5f1">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -219,6 +219,9 @@
       </version>
       <version name="1.0.0" author="ALiXiA" time="2026-11-09T17:57:27Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/f72cc98d0c7b2c8990cfe7eb58bea84730acb89c/Scripts/ALiXIA_UnLockTracks.lua</source>
+      </version>
+      <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:04:30Z">
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c34a36fdba73ce1e990bab6603ad754ab8e5c5f1/Scripts/ALiXIA_UnLockTracks.lua</source>
       </version>
     </reapack>
   </category>
