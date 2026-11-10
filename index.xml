@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="cc0366651c19ec1dd44d498619fe2e1b6b9629a3">
+<index version="1" name="ALiXiA ReaScripts" commit="8c25fceb2338d6c8198b0984b6071e0291f69c2c">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -208,19 +208,24 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/4b908e7a7ad679575258b5c5fa3c906eb1d3db46/Scripts/ALiXiA_Rea_SessionPrep.lua</source>
       </version>
     </reapack>
-    <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="Gain Staging Utility">
+    <reapack name="AliXiA_Real Stage Gaining Monitor For Mixing.lua" type="script" desc="ALiXiA Gain Staging Utility and Analyzer">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Reaper gain Staging Analyzer FIxed monitor audio in real time\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 ALiXiA gain Staging Utility and Analyzer\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
       <version name="2.0.1" author="ALiXiA Gregory" time="2026-11-10T04:07:06Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/b3b7c61edebac7513471656790d762164e7caf7f/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
+      </version>
+      <version name="2.0.2" author="ALiXiA and Rea - The Reaper Queens of EDM" time="2026-11-10T18:57:57Z">
+        <changelog><![CDATA[Fixed monitor audio in real time and metadata]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/8c25fceb2338d6c8198b0984b6071e0291f69c2c/Scripts/AliXiA_Real%20Stage%20Gaining%20Monitor%20For%20Mixing.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Studio Manager Script.lua" type="script" desc="REA Studio Manager (Project, Track, &amp; Time Tracker)">
