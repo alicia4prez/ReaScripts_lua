@@ -5,7 +5,7 @@
 -- @link Repository https://github.com/alicia4prez/ReaScripts_lua
 -- @donation https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4
 -- @changelog
---   Stabndarized Meta Data
+--   Standarized Meta Data
 
 
 local r = reaper
