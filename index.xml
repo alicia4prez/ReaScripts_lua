@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="b4ef7b0164c467a7e8aa493135c09a0a4bcb8ffb">
+<index version="1" name="ALiXiA ReaScripts" commit="73709fc10a1f91f77a81d057125f7caa2700d71a">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -138,13 +138,18 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected track (or Master track if none selected), reveals the Tension Macro envelope, and draws a tight 0% to 100% exponential build-up ramp with an instant 0% drop cliff across the current Time Selection.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Finds (or inserts) the ALiXiA MauP Tension Transition Macro JSFX on the selected track (or Master track if none selected), reveals the Tension Macro envelope, and draws a tight 0% -> 100% exponential build-up ramp with an instant 0% drop cliff across the current Time Selection.\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
       <version name="1.0.1" author="Rea &amp; Alixia" time="2026-11-10T04:05:46Z">
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/51b15d3687b407b6061c6722a881c596491458c2/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
+      </version>
+      <version name="1.0.2" author="Rea &amp; Alixia" time="2026-11-10T18:38:11Z">
+        <changelog><![CDATA[+ Standarized metadata for all scripts]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/73709fc10a1f91f77a81d057125f7caa2700d71a/Scripts/ALiXiA_Mau%20P%20Companion.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_Mix Prep and Session Sanitizer.lua" type="script" desc="ALiXiA_Mix Prep and Session Sanitizer">
