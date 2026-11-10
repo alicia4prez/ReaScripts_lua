@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ALiXiA ReaScripts" commit="cb8426f7e781d423288765bdb74d445f0284ee93">
+<index version="1" name="ALiXiA ReaScripts" commit="c71bb101897443817076834a15f7b726cffd5b26">
   <category name="JSFX">
     <reapack name="ALiXiA_MauP_Tension_Transition.jsfx" type="effect" desc="ALiXiA_MauP_Tension_Transition.jsfx (Generate A Massive Drop)">
       <metadata>
@@ -89,7 +89,7 @@
         <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/cb8426f7e781d423288765bdb74d445f0284ee93/Scripts/ALiXiA_DIatonic%20major%20minor%20mode%20transposer2.lua</source>
       </version>
     </reapack>
-    <reapack name="ALiXiA_Digital Fingerprint.lua" type="script" desc="Digital Fingerprint">
+    <reapack name="ALiXiA_Digital Fingerprint.lua" type="script" desc="ALiXiA Digital Fingerprint Embedder">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -98,11 +98,12 @@
 {\pard \ql \f0 \sa180 \li0 \fi0 Embeds a digital signature in the metadata of a file.\par}
 }
 ]]></description>
+        <link rel="website" href="https://github.com/alicia4prez/ReaScripts_lua">Repository</link>
         <link rel="donation">https://www.paypal.com/donate/?hosted_button_id=GXEUXZN7GD7W4</link>
       </metadata>
-      <version name="1.0.1" author="ALiXiA" time="2026-11-10T04:05:09Z">
-        <changelog><![CDATA[- Initial release]]></changelog>
-        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/13bd6fec6f42924d0eaf1ba1d8db7734d253f798/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
+      <version name="1.0.1" author="ALiXiA and Rea - The Reaper Queens of EDM" time="2026-11-10T04:05:09Z">
+        <changelog><![CDATA[- Changed some typos and fixed metadata information ]]></changelog>
+        <source main="main">https://github.com/alicia4prez/ReaScripts_lua/raw/c71bb101897443817076834a15f7b726cffd5b26/Scripts/ALiXiA_Digital%20Fingerprint.lua</source>
       </version>
     </reapack>
     <reapack name="ALiXiA_LockTracks.lua" type="script" desc="Locks Folder childs so they dont get jostled around elsewhere">
